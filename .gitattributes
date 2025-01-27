@@ -1,0 +1,2 @@
+pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/candidate_mutation_table.pickle.gz filter=lfs diff=lfs merge=lfs -text
+pathogen_mapping/streptococcus_lutetiensis/analysis_py/candidate_mutation_table.pickle.gz filter=lfs diff=lfs merge=lfs -text
