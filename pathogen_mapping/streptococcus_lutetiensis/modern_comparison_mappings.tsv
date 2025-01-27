@@ -1,0 +1,22 @@
+Data	Source(Accession_No.	Sequencing_Platform	Sequencing_Library	Insert_Size	Experiment	Species_Name
+ERR3530420	ILLUMINA	Paired	100	ERX3549394	SRA	Streptococcus_pneumoniae_300865
+SRR9624840	ILLUMINA	Paired	605	SRX6387061	SRA	Streptococcus_gallolyticus_FDAARGOS_755
+SRR8984871	ILLUMINA	Paired	516	SRX5764132	SRA	Streptococcus_gallolyticus_FDAARGOS_666
+SRR4228513	ILLUMINA	Paired		SRX2155810	SRA	Streptococcus_equinus_MPR2
+SRR4228510	ILLUMINA	Paired		SRX2155807	SRA	Streptococcus_infantarius_Sb20
+SRR4228493	ILLUMINA	Paired		SRX2155790	SRA	Streptococcus_infantarius_45
+SRR4140242	ILLUMINA	Paired		SRX2122668	SRA	Streptococcus_equinus_pGA-7
+SRR9720054	ILLUMINA	Paired		SRX6477869	SRA	Streptococcus_gallolyticus_PMB1956
+SRR12825931	ILLUMINA	Paired	557	SRX9293568	SRA	Streptococcus_lutetiensis_FDAARGOS_1018
+SRR13259118	ILLUMINA	Paired		SRX9689842	SRA	Streptococcus_lutetiensis_DSMZ_15350-TS
+SRR9720103	ILLUMINA	Paired		SRX6477820	SRA	Streptococcus_infantarius_STR_HA7938AA
+ERR5159235	ILLUMINA	Paired		ERX4964206	SRA	Streptococcus_infantarius_BR_UFV05
+ERR5159232	ILLUMINA	Paired		ERX4964203	SRA	Streptococcus_infantarius_BR_UFV02
+SRR11410556	ILLUMINA	Paired		SRX7989272	SRA	Streptococcus_equinus_CMB014
+SRR11410616	ILLUMINA	Paired		SRX7989212	SRA	Streptococcus_equinus_CMB062
+SRR9222245	ILLUMINA	Paired		SRX5992946	SRA	Streptococcus_salivarius_BIOML-A25
+SRR11730471	ILLUMINA	Paired		SRX8289612	SRA	Streptococcus_equinus_CNU_G6
+SRR11410630	ILLUMINA	Paired		SRX7989198	SRA	Streptococcus_sp_CMB018_equinus
+SRR3031689	PACBIO	Single		SRX1490814	SRA	Streptococcus_lutetiensis_ICDDRB-NRC-S6
+ERR1229110	PACBIO	Single		ERX1301162	SRA	Streptococcus_lutetiensis_NCTC8738
+SRR3031690	PACBIO	Single		SRX1490815	SRA	Streptococcus_lutetiensis_ICDDRB-NRC-S5

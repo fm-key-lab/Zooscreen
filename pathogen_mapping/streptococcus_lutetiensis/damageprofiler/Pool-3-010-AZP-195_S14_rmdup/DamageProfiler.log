@@ -1,0 +1,35 @@
+2024-04-10 10:30:07 INFO  StartCalculations:262 - DamageProfiler v0.4.9
+2024-04-10 10:30:07 INFO  StartCalculations:274 - Analysis of file (-i):Pool-3-010-AZP-195_S14_rmdup.bam
+Output folder (-o):/raven/ptmp/iclight/eager/mapping/zooscreen/Slutetiensis/work/36/fe278c9f6b97e45fff5f418dea502d/./Pool-3-010-AZP-195_S14_rmdup
+Reference (-r, optional) :genome.fasta
+Specie (-s, optional):null
+Species list (-sf, optional):null
+Length (-l): 100
+Threshold (-t): 15
+Height yaxis (-yaxis): 0.3
+x-axis min ID histogram (-xaxis_histo_min): -1.0
+x-axis max ID histogram (-xaxis_histo_max): -1.0
+x-axis min length histogram (-xaxis_histo_length_min): -1.0
+x-axis max length histogram (-xaxis_histo_length_max): -1.0
+
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 100 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 200 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 300 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 400 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 500 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 600 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 700 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 800 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 900 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1000 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1100 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1200 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1300 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1400 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1500 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:115 - 1600 Reads processed.
+2024-04-10 10:30:07 INFO  StartCalculations:952 - Values normalized ....
+2024-04-10 10:30:07 INFO  StartCalculations:133 - -------------------
+2024-04-10 10:30:07 INFO  StartCalculations:134 - # reads used for damage calculation: 1665
+2024-04-10 10:30:08 INFO  StartCalculations:376 - Output files generated
+2024-04-10 10:30:08 INFO  StartCalculations:316 - Runtime of Module was: 1 seconds.

@@ -1,0 +1,10 @@
+variable	values
+malt_extract_mode	def_anc
+malt_extract_output_folder	/ptmp/iclight/malt_reanalysis/zooscreen_final/200423_tartu_data
+paired_end_mode	FALSE
+node_list	/u/iclight/zooscreen/zooscreen_final_production_run.txt
+damage_cutoff	0.1
+read_distribution_cutoff	0.6
+default_edit_distance_ratio	0.8
+ancient_edit_distance_ratio	0.5
+firm_cutoff_for_output	TRUE

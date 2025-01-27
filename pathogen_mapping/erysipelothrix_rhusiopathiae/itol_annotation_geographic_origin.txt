@@ -1,0 +1,188 @@
+DATASET_COLORSTRIP
+#In colored strip datasets  each ID is associated to a color box/strip and can have an optioUnknownl label. Color can be specified in hexadecimal  RGB or RGBA notation. When using RGB or RGBA notation  you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB SPACE or COMMA).This separator must be used throughout this file.
+
+#SEPARATOR TAB
+SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,Geographic Source
+
+#dataset color (can be changed later)
+COLOR,#ff0000
+
+#=================================================================#
+#                    OPTIOUnknownL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1  branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color  it will be colored the same  ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES 0
+
+
+#=================================================================#
+#     all other optioUnknownl settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend  which is defined using LEGEND_XXX fields below
+#For each row in the legend  there should be one shape  color and label.
+#OptioUnknownlly  you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning  do NOT define these values
+#OptioUnknownlly  shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape  you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically  set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6  or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE,Geographic Origin
+LEGEND_SCALE,1
+LEGEND_POSITION_X,100
+LEGEND_POSITION_Y,100
+LEGEND_HORIZONTAL,0
+LEGEND_SHAPES,1,1,1,1,1,1,1
+LEGEND_LABELS,Europe,Russia,China,Korea,Japan,USA,Unknown
+LEGEND_COLORS,#edf8fb,#ccece6,#99d8c9,#66c2a4,#41ae76,#238b45,#005824
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin  used to increase/decrease the spacing to the next dataset. Can be negative  causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0  a border of specified width (in pixels) will be drawn around the color strip 
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#if set to 1  border will be drawn completely around each colored strip box
+#COMPLETE_BORDER 0
+
+#always show interUnknownl values; if set  values associated to interUnknownl nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERUnknownL 0
+
+
+#display or hide the individual label inside each colored strip (when defined in the data below)
+#SHOW_STRIP_LABELS 1
+
+#position of the strip label within the box; 'top'  'center' or 'bottom'
+#STRIP_LABEL_POSITION center
+
+#strip label size factor (relative to the tree leaf labels)
+#STRIP_LABEL_SIZE_FACTOR 1
+
+
+#rotation of the strip labels; used only in rectangular tree display mode
+STRIP_LABEL_ROTATION,45
+
+#strip label shift in pixels (positive or negative)
+#STRIP_LABEL_SHIFT 0
+
+#STRIP_LABEL_COLOR #000000
+
+#draw a black outline around the text (width in pixels)
+#STRIP_LABEL_OUTLINE 0.5
+
+#calculate the label color automatically (black or white)  based on the darkness of the color strip
+#STRIP_LABEL_AUTO_COLOR 0
+
+#display or hide the dataset label above the colored strip
+SHOW_LABELS,1
+
+#dataset label size factor
+#SIZE_FACTOR 1
+
+#dataset label rotation
+#LABEL_ROTATION 0
+
+#dataset label shift in pixels (positive or negative)
+#LABEL_SHIFT 0
+
+#InterUnknownl tree nodes can be specified using IDs directly  or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+Sref,#edf8fb,Europe
+EASI241,#ccece6,Russia
+ldo050,#edf8fb,Europe
+ldo060,#edf8fb,Europe
+ldo062,#edf8fb,Europe
+GCF_000373785.1,#41ae76,Japan
+GCA_000160815.2,#005824,Unknown
+GCA_000270085.1,#005824,Unknown
+GCA_000404205.1,#005824,Unknown
+GCA_001602155.1,#99d8c9,China
+GCA_001723625.1,#99d8c9,China
+GCA_003226675.1,#99d8c9,China
+GCA_003722215.1,#66c2a4,Korea
+GCA_003725505.1,#ccece6,Russia
+GCA_006384935.1,#99d8c9,China
+GCA_006384955.1,#99d8c9,China
+GCA_007725185.1,#99d8c9,China
+GCA_022132165.1,#238b45,USA
+GCA_022132215.1,#238b45,USA
+GCA_023650665.1,#edf8fb,Europe
+GCA_029073425.1,#005824,Unknown
+GCA_029073645.1,#005824,Unknown
+GCA_029073765.1,#005824,Unknown
+GCA_029073995.1,#005824,Unknown
+GCA_029074315.1,#005824,Unknown
+GCA_029074345.1,#005824,Unknown
+GCA_029074355.1,#005824,Unknown
+GCA_029074405.1,#edf8fb,Europe
+GCA_029074605.1,#238b45,USA
+GCA_029074615.1,#edf8fb,Europe
+GCA_029074705.1,#005824,Unknown
+GCA_029074745.1,#005824,Unknown
+GCA_029074835.1,#005824,Unknown
+GCA_029074885.1,#005824,Unknown
+GCA_029074945.1,#005824,Unknown
+GCA_029074965.1,#005824,Unknown
+GCA_029077385.1,#005824,Unknown
+GCA_029077485.1,#005824,Unknown
+GCA_029077635.1,#238b45,USA
+GCA_029077705.1,#005824,Unknown
+GCA_029077745.1,#edf8fb,Europe
+GCA_029102535.1,#005824,Unknown
+GCA_029102545.1,#005824,Unknown
+GCA_031215075.1,#99d8c9,China
+GCA_033115815.1,#99d8c9,China
+GCA_033115835.1,#99d8c9,China
+GCA_033115845.1,#99d8c9,China
+GCA_033115855.1,#99d8c9,China
+GCA_033115885.1,#99d8c9,China
+GCA_035066585.1,#238b45,USA
+GCA_036620455.1,#edf8fb,Europe
+GCA_900448055.1,#edf8fb,Europe
+GCA_900637845.1,#edf8fb,Europe
+GCA_947037165.1,#edf8fb,Europe
+GCA_947037175.1,#edf8fb,Europe
+GCA_947037435.1,#edf8fb,Europe
+GCA_947037575.1,#edf8fb,Europe
+GCA_947037675.1,#edf8fb,Europe
+GCA_947038085.1,#edf8fb,Europe
+GCA_947038205.1,#edf8fb,Europe
+GCA_947038325.1,#edf8fb,Europe
+GCA_947038705.1,#edf8fb,Europe
+GCA_947038715.1,#edf8fb,Europe
+GCA_947038735.1,#edf8fb,Europe
+GCA_947038755.1,#edf8fb,Europe
+GCA_947039675.1,#edf8fb,Europe
+GCA_947039825.1,#edf8fb,Europe
+GCA_947040135.1,#edf8fb,Europe
+GCA_947040195.1,#edf8fb,Europe
+GCA_947040235.1,#edf8fb,Europe
+GCA_947041805.1,#edf8fb,Europe

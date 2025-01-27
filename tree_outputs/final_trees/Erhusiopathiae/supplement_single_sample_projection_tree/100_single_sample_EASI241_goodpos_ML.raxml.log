@@ -1,0 +1,219 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M1, 8 cores, 16 GB RAM
+
+RAxML-NG was called at 11-Nov-2024 09:24:56 as follows:
+
+raxml-ng --msa 2024-11-11_09-24-55.fa --model GTR+G --prefix 100_single_sample_EASI241_goodpos_ML --threads 2 --bs-trees 100 --all --redo
+
+Analysis options:
+  run mode: ML tree search + bootstrapping (Felsenstein Bootstrap)
+  start tree(s): random (10) + parsimony (10)
+  bootstrap replicates: parsimony (100)
+  random seed: 1731313496
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (2 threads), thread pinning: OFF
+
+WARNING: Running in REDO mode: existing checkpoints are ignored, and all result files will be overwritten!
+
+[00:00:00] Reading alignment from file: 2024-11-11_09-24-55.fa
+[00:00:00] Loaded alignment with 45 taxa and 8976 sites
+
+WARNING: Sequences Sref and GCA_000160815.2 are exactly identical!
+WARNING: Sequences Sref and GCA_900637845.1 are exactly identical!
+WARNING: Duplicate sequences found: 2
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2812 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 8976 / 2812
+Gaps: 3.74 %
+Invariant sites: 0.89 %
+
+
+NOTE: Binary MSA file created: 100_single_sample_EASI241_goodpos_ML.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 2 thread(s)
+
+[00:00:00] Generating 10 random starting tree(s) with 45 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 45 taxa
+Parallel parsimony with 2 threads
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 1406 / 22496
+[00:00:00] Data distribution: max. searches per worker: 120
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:12] ML tree search #1, logLikelihood: -58856.825975
+[00:00:23] ML tree search #2, logLikelihood: -58891.171729
+[00:00:34] ML tree search #3, logLikelihood: -58856.825665
+[00:00:45] ML tree search #4, logLikelihood: -58856.821301
+[00:00:57] ML tree search #5, logLikelihood: -58831.380181
+[00:01:07] ML tree search #6, logLikelihood: -58831.536182
+[00:01:18] ML tree search #7, logLikelihood: -58856.819684
+[00:01:27] ML tree search #8, logLikelihood: -58856.819376
+[00:01:40] ML tree search #9, logLikelihood: -58856.817770
+[00:01:50] ML tree search #10, logLikelihood: -58856.825918
+[00:01:57] ML tree search #11, logLikelihood: -58831.375387
+[00:02:05] ML tree search #12, logLikelihood: -60570.269583
+[00:02:17] ML tree search #13, logLikelihood: -58856.832519
+[00:02:27] ML tree search #14, logLikelihood: -58856.841759
+[00:02:39] ML tree search #15, logLikelihood: -58856.833274
+[00:02:48] ML tree search #16, logLikelihood: -58856.056242
+[00:02:57] ML tree search #17, logLikelihood: -58831.559738
+[00:03:03] ML tree search #18, logLikelihood: -58831.377868
+[00:03:13] ML tree search #19, logLikelihood: -58831.559574
+[00:03:24] ML tree search #20, logLikelihood: -58831.560421
+
+[00:03:24] ML tree search completed, best tree logLH: -58831.375387
+
+[00:03:24] Starting bootstrapping analysis with 100 replicates.
+
+[00:03:30] Bootstrap tree #1, logLikelihood: -58429.267243
+[00:03:37] Bootstrap tree #2, logLikelihood: -58690.476880
+[00:03:44] Bootstrap tree #3, logLikelihood: -58971.057117
+[00:03:48] Bootstrap tree #4, logLikelihood: -60546.062602
+[00:03:55] Bootstrap tree #5, logLikelihood: -58630.457175
+[00:04:05] Bootstrap tree #6, logLikelihood: -59194.786400
+[00:04:10] Bootstrap tree #7, logLikelihood: -61261.582447
+[00:04:16] Bootstrap tree #8, logLikelihood: -60805.216008
+[00:04:22] Bootstrap tree #9, logLikelihood: -59032.495008
+[00:04:30] Bootstrap tree #10, logLikelihood: -58916.846884
+[00:04:34] Bootstrap tree #11, logLikelihood: -58593.607124
+[00:04:39] Bootstrap tree #12, logLikelihood: -58942.664149
+[00:04:46] Bootstrap tree #13, logLikelihood: -57912.725568
+[00:04:50] Bootstrap tree #14, logLikelihood: -60590.663229
+[00:04:55] Bootstrap tree #15, logLikelihood: -59796.370870
+[00:05:03] Bootstrap tree #16, logLikelihood: -57993.638145
+[00:05:09] Bootstrap tree #17, logLikelihood: -58510.464531
+[00:05:15] Bootstrap tree #18, logLikelihood: -58888.522789
+[00:05:21] Bootstrap tree #19, logLikelihood: -59114.233058
+[00:05:27] Bootstrap tree #20, logLikelihood: -60276.069049
+[00:05:35] Bootstrap tree #21, logLikelihood: -58768.908434
+[00:05:43] Bootstrap tree #22, logLikelihood: -58668.719090
+[00:05:48] Bootstrap tree #23, logLikelihood: -58044.042822
+[00:05:55] Bootstrap tree #24, logLikelihood: -58827.192259
+[00:06:05] Bootstrap tree #25, logLikelihood: -58936.153289
+[00:06:14] Bootstrap tree #26, logLikelihood: -58285.790382
+[00:06:20] Bootstrap tree #27, logLikelihood: -59151.690499
+[00:06:25] Bootstrap tree #28, logLikelihood: -60585.322552
+[00:06:31] Bootstrap tree #29, logLikelihood: -59300.800252
+[00:06:44] Bootstrap tree #30, logLikelihood: -59161.225817
+[00:06:50] Bootstrap tree #31, logLikelihood: -58791.283250
+[00:06:57] Bootstrap tree #32, logLikelihood: -58653.724139
+[00:07:05] Bootstrap tree #33, logLikelihood: -58606.710939
+[00:07:11] Bootstrap tree #34, logLikelihood: -58999.953653
+[00:07:23] Bootstrap tree #35, logLikelihood: -58846.624986
+[00:07:29] Bootstrap tree #36, logLikelihood: -60066.549194
+[00:07:35] Bootstrap tree #37, logLikelihood: -58880.735742
+[00:07:41] Bootstrap tree #38, logLikelihood: -58924.951745
+[00:07:47] Bootstrap tree #39, logLikelihood: -58488.034399
+[00:07:54] Bootstrap tree #40, logLikelihood: -58616.746290
+[00:07:59] Bootstrap tree #41, logLikelihood: -59271.379321
+[00:08:05] Bootstrap tree #42, logLikelihood: -58873.120167
+[00:08:10] Bootstrap tree #43, logLikelihood: -58768.981584
+[00:08:15] Bootstrap tree #44, logLikelihood: -59150.696973
+[00:08:24] Bootstrap tree #45, logLikelihood: -59057.668971
+[00:08:30] Bootstrap tree #46, logLikelihood: -58541.811662
+[00:08:36] Bootstrap tree #47, logLikelihood: -60848.223487
+[00:08:44] Bootstrap tree #48, logLikelihood: -58941.924075
+[00:08:51] Bootstrap tree #49, logLikelihood: -58615.116310
+[00:08:57] Bootstrap tree #50, logLikelihood: -58379.235850
+[00:09:03] Bootstrap tree #51, logLikelihood: -58615.303540
+[00:09:11] Bootstrap tree #52, logLikelihood: -58772.000651
+[00:09:19] Bootstrap tree #53, logLikelihood: -58468.767995
+[00:09:25] Bootstrap tree #54, logLikelihood: -59227.365031
+[00:09:35] Bootstrap tree #55, logLikelihood: -58690.467115
+[00:09:41] Bootstrap tree #56, logLikelihood: -58607.244804
+[00:09:51] Bootstrap tree #57, logLikelihood: -59182.786446
+[00:09:57] Bootstrap tree #58, logLikelihood: -58407.480691
+[00:10:06] Bootstrap tree #59, logLikelihood: -58821.442017
+[00:10:11] Bootstrap tree #60, logLikelihood: -58960.575662
+[00:10:16] Bootstrap tree #61, logLikelihood: -59356.910094
+[00:10:24] Bootstrap tree #62, logLikelihood: -58203.160751
+[00:10:32] Bootstrap tree #63, logLikelihood: -59394.104833
+[00:10:42] Bootstrap tree #64, logLikelihood: -58517.729571
+[00:10:48] Bootstrap tree #65, logLikelihood: -58795.903705
+[00:10:53] Bootstrap tree #66, logLikelihood: -60006.898089
+[00:11:00] Bootstrap tree #67, logLikelihood: -58990.173818
+[00:11:09] Bootstrap tree #68, logLikelihood: -58676.422761
+[00:11:15] Bootstrap tree #69, logLikelihood: -59391.351067
+[00:11:22] Bootstrap tree #70, logLikelihood: -58664.457867
+[00:11:30] Bootstrap tree #71, logLikelihood: -58344.901538
+[00:11:37] Bootstrap tree #72, logLikelihood: -58417.893774
+[00:11:44] Bootstrap tree #73, logLikelihood: -58513.787446
+[00:11:48] Bootstrap tree #74, logLikelihood: -59113.878378
+[00:11:56] Bootstrap tree #75, logLikelihood: -58999.813846
+[00:12:03] Bootstrap tree #76, logLikelihood: -58627.136656
+[00:12:09] Bootstrap tree #77, logLikelihood: -60407.355324
+[00:12:17] Bootstrap tree #78, logLikelihood: -59264.157394
+[00:12:22] Bootstrap tree #79, logLikelihood: -58913.156165
+[00:12:30] Bootstrap tree #80, logLikelihood: -60533.364063
+[00:12:35] Bootstrap tree #81, logLikelihood: -58509.352931
+[00:12:43] Bootstrap tree #82, logLikelihood: -59041.500824
+[00:12:50] Bootstrap tree #83, logLikelihood: -58563.939118
+[00:12:59] Bootstrap tree #84, logLikelihood: -59090.505457
+[00:13:06] Bootstrap tree #85, logLikelihood: -58451.630516
+[00:13:13] Bootstrap tree #86, logLikelihood: -58698.217377
+[00:13:18] Bootstrap tree #87, logLikelihood: -60821.117685
+[00:13:24] Bootstrap tree #88, logLikelihood: -59351.314192
+[00:13:34] Bootstrap tree #89, logLikelihood: -59714.030219
+[00:13:41] Bootstrap tree #90, logLikelihood: -59041.852445
+[00:13:48] Bootstrap tree #91, logLikelihood: -58869.061500
+[00:13:54] Bootstrap tree #92, logLikelihood: -58472.494253
+[00:14:00] Bootstrap tree #93, logLikelihood: -58906.107078
+[00:14:09] Bootstrap tree #94, logLikelihood: -59220.232167
+[00:14:17] Bootstrap tree #95, logLikelihood: -58459.748039
+[00:14:25] Bootstrap tree #96, logLikelihood: -58887.213057
+[00:14:31] Bootstrap tree #97, logLikelihood: -58792.264996
+[00:14:37] Bootstrap tree #98, logLikelihood: -60754.502295
+[00:14:42] Bootstrap tree #99, logLikelihood: -59646.502871
+[00:14:52] Bootstrap tree #100, logLikelihood: -58590.616107
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 99.868814 (ML),  weights&rates: (0.250000,0.875826) (0.250000,0.964714) (0.250000,1.029567) (0.250000,1.129893) 
+   Base frequencies (ML): 0.277487 0.220428 0.225524 0.276562 
+   Substitution rates (ML): 0.969197 4.713659 1.572105 0.530798 5.112571 1.000000 
+
+
+Final LogLikelihood: -58831.375387
+
+AIC score: 117854.750774 / AICc score: 117856.848308 / BIC score: 118536.572498
+Free parameters (model + branch lengths): 96
+
+WARNING: Best ML tree contains 15 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.bestTreeCollapsed
+Best ML tree saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.bestTree
+All ML trees saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.support
+Optimized model saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.bestModel
+Bootstrap trees saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.bootstraps
+
+Execution log saved to: /Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_mapping/erysipelothrix_rhusiopathiae/analysis_py/genbank_modern_comps/100_single_sample_EASI241_goodpos_ML.raxml.log
+
+Analysis started: 11-Nov-2024 09:24:56 / finished: 11-Nov-2024 09:39:48
+
+Elapsed time: 892.684 seconds
+

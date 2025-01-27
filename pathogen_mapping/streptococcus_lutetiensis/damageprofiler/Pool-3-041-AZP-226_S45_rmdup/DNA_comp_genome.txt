@@ -1,0 +1,10 @@
+# table produced by calculations.DamageProfiler
+# using mapped file Pool-3-041-AZP-226_S45_rmdup.bam
+# Sample ID: Pool-3-041-AZP-226_S45_rmdup.bam
+DNA base frequencies Sample
+A	C	G	T
+0.3058260971148996	0.1931300538770761	0.18944379887542048	0.31160005013260383
+
+DNA base frequencies Reference
+A	C	G	T
+0.3060202596857942	0.20015850729996337	0.18935780363123705	0.3044634293830054

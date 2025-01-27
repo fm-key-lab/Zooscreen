@@ -1,0 +1,278 @@
+DATASET_COLORSTRIP
+#In colored strip datasets  each ID is associated to a color box/strip and can have an optional label. Color can be specified in hexadecimal  RGB or RGBA notation. When using RGB or RGBA notation  you cannot use COMMA as the dataset separator
+
+#lines starting with a hash are comments and ignored during parsing
+
+#=================================================================#
+#                    MANDATORY SETTINGS                           #
+#=================================================================#
+#select the separator which is used to delimit the data below (TAB SPACE or COMMA).This separator must be used throughout this file.
+
+#SEPARATOR TAB
+SEPARATOR COMMA
+#SEPARATOR SPACE
+
+#label is used in the legend table (can be changed later)
+DATASET_LABEL,Isolation Source
+
+#dataset color (can be changed later)
+COLOR,#ff0000
+
+#=================================================================#
+#                    OPTIONAL SETTINGS                            #
+#=================================================================#
+
+#If COLOR_BRANCHES is set to 1  branches of the tree will be colored according to the colors of the strips above the leaves.
+#When all children of a node have the same color  it will be colored the same  ie. the color will propagate inwards towards the root.
+COLOR_BRANCHES,0
+
+
+#=================================================================#
+#     all other optional settings can be set or changed later     #
+#           in the web interface (under 'Datasets' tab)           #
+#=================================================================#
+
+#Each dataset can have a legend  which is defined using LEGEND_XXX fields below
+#For each row in the legend  there should be one shape  color and label.
+#Optionally  you can define an exact legend position using LEGEND_POSITION_X and LEGEND_POSITION_Y. To use automatic legend positioning  do NOT define these values
+#Optionally  shape scaling can be present (LEGEND_SHAPE_SCALES). For each shape  you can define a scaling factor between 0 and 1.
+#To order legend entries horizontally instead of vertically  set LEGEND_HORIZONTAL to 1
+#Shape should be a number between 1 and 6  or any protein domain shape definition.
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE,Isolate Source
+LEGEND_SCALE,1
+LEGEND_POSITION_X,100
+LEGEND_POSITION_Y,100
+LEGEND_HORIZONTAL,0
+LEGEND_SHAPES,1,1,1,1,1,1
+LEGEND_LABELS,Human,Pig,Cattle,Otter,Dolphin/Porpoise,Unknown
+LEGEND_COLORS,#edf8fb,#bfd3e6,#9ebcda,#8c96c6,#8856a7,#810f7c
+
+#width of the colored strip
+#STRIP_WIDTH 25
+
+#left margin  used to increase/decrease the spacing to the next dataset. Can be negative  causing datasets to overlap.
+#MARGIN 0
+
+#border width; if set above 0  a border of specified width (in pixels) will be drawn around the color strip 
+#BORDER_WIDTH 0
+
+#border color; used when BORDER_WIDTH is above 0
+#BORDER_COLOR #0000ff
+
+#if set to 1  border will be drawn completely around each colored strip box
+#COMPLETE_BORDER 0
+
+#always show internal values; if set  values associated to internal nodes will be displayed even if these nodes are not collapsed. It could cause overlapping in the dataset display.
+#SHOW_INTERNAL 0
+
+
+#display or hide the individual label inside each colored strip (when defined in the data below)
+#SHOW_STRIP_LABELS 1
+
+#position of the strip label within the box; 'top'  'center' or 'bottom'
+#STRIP_LABEL_POSITION center
+
+#strip label size factor (relative to the tree leaf labels)
+#STRIP_LABEL_SIZE_FACTOR 1
+
+
+#rotation of the strip labels; used only in rectangular tree display mode
+STRIP_LABEL_ROTATION,45
+
+#strip label shift in pixels (positive or negative)
+#STRIP_LABEL_SHIFT 0
+
+#STRIP_LABEL_COLOR #000000
+
+#draw a black outline around the text (width in pixels)
+#STRIP_LABEL_OUTLINE 0.5
+
+#calculate the label color automatically (black or white)  based on the darkness of the color strip
+#STRIP_LABEL_AUTO_COLOR 0
+
+#display or hide the dataset label above the colored strip
+SHOW_LABELS,1
+
+#dataset label size factor
+#SIZE_FACTOR 1
+
+#dataset label rotation
+LABEL_ROTATION,45
+
+#dataset label shift in pixels (positive or negative)
+#LABEL_SHIFT 0
+
+#Internal tree nodes can be specified using IDs directly  or using the 'last common ancestor' method described in iTOL help pages
+
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+EASI241,#9ebcda,Cattle
+ldo050,#edf8fb,Human
+ldo060,#edf8fb,Human
+ldo062,#edf8fb,Human
+Sref,#bfd3e6,Pig
+GCF_000373785.1,#bfd3e6,Pig
+GCA_003722215.1,#8856a7,Dolphin/Porpoise
+GCA_000160815.2,#edf8fb,Human
+GCA_000270085.1,#810f7c,Unknown
+GCA_000404205.1,#810f7c,Unknown
+GCA_001602155.1,#bfd3e6,Pig
+GCA_001723625.1,#bfd3e6,Pig
+GCA_003226675.1,#bfd3e6,Pig
+GCA_003725505.1,#bfd3e6,Pig
+GCA_006384935.1,#bfd3e6,Pig
+GCA_006384955.1,#bfd3e6,Pig
+GCA_007725185.1,#810f7c,Unknown
+GCA_022132165.1,#8856a7,Dolphin/Porpoise
+GCA_022132215.1,#8856a7,Dolphin/Porpoise
+GCA_023650665.1,#edf8fb,Human
+GCA_029073305.1,#810f7c,Unknown
+GCA_029073325.1,#bfd3e6,Pig
+GCA_029073345.1,#bfd3e6,Pig
+GCA_029073355.1,#bfd3e6,Pig
+GCA_029073365.1,#810f7c,Unknown
+GCA_029073405.1,#810f7c,Unknown
+GCA_029073425.1,Vaccine
+GCA_029073445.1,#bfd3e6,Pig
+GCA_029073455.1,#bfd3e6,Pig
+GCA_029073475.1,#bfd3e6,Pig
+GCA_029073505.1,#bfd3e6,Pig
+GCA_029073525.1,#bfd3e6,Pig
+GCA_029073545.1,#bfd3e6,Pig
+GCA_029073565.1,#bfd3e6,Pig
+GCA_029073585.1,#bfd3e6,Pig
+GCA_029073595.1,#bfd3e6,Pig
+GCA_029073625.1,#bfd3e6,Pig
+GCA_029073645.1,Vaccine
+GCA_029073665.1,#bfd3e6,Pig
+GCA_029073685.1,#bfd3e6,Pig
+GCA_029073695.1,#bfd3e6,Pig
+GCA_029073715.1,#bfd3e6,Pig
+GCA_029073745.1,#bfd3e6,Pig
+GCA_029073765.1,Vaccine
+GCA_029073785.1,#bfd3e6,Pig
+GCA_029073805.1,#bfd3e6,Pig
+GCA_029073815.1,#bfd3e6,Pig
+GCA_029073845.1,#bfd3e6,Pig
+GCA_029073865.1,#bfd3e6,Pig
+GCA_029073885.1,#bfd3e6,Pig
+GCA_029073895.1,#bfd3e6,Pig
+GCA_029073915.1,#bfd3e6,Pig
+GCA_029073945.1,#bfd3e6,Pig
+GCA_029073955.1,#bfd3e6,Pig
+GCA_029073985.1,#bfd3e6,Pig
+GCA_029073995.1,#bfd3e6,Pig
+GCA_029074005.1,#bfd3e6,Pig
+GCA_029074035.1,#bfd3e6,Pig
+GCA_029074065.1,#bfd3e6,Pig
+GCA_029074085.1,#bfd3e6,Pig
+GCA_029074095.1,#bfd3e6,Pig
+GCA_029074105.1,#bfd3e6,Pig
+GCA_029074145.1,#bfd3e6,Pig
+GCA_029074155.1,#bfd3e6,Pig
+GCA_029074185.1,#bfd3e6,Pig
+GCA_029074205.1,#bfd3e6,Pig
+GCA_029074215.1,#bfd3e6,Pig
+GCA_029074245.1,#bfd3e6,Pig
+GCA_029074265.1,#bfd3e6,Pig
+GCA_029074285.1,#bfd3e6,Pig
+GCA_029074305.1,#bfd3e6,Pig
+GCA_029074315.1,#bfd3e6,Pig
+GCA_029074345.1,#bfd3e6,Pig
+GCA_029074355.1,#bfd3e6,Pig
+GCA_029074385.1,#bfd3e6,Pig
+GCA_029074405.1,Fish
+GCA_029074425.1,#bfd3e6,Pig
+GCA_029074445.1,#bfd3e6,Pig
+GCA_029074465.1,#bfd3e6,Pig
+GCA_029074475.1,#bfd3e6,Pig
+GCA_029074505.1,#bfd3e6,Pig
+GCA_029074515.1,#bfd3e6,Pig
+GCA_029074545.1,#bfd3e6,Pig
+GCA_029074555.1,#bfd3e6,Pig
+GCA_029074585.1,#bfd3e6,Pig
+GCA_029074605.1,#bfd3e6,Pig
+GCA_029074615.1,#bfd3e6,Pig
+GCA_029074625.1,#bfd3e6,Pig
+GCA_029074635.1,#bfd3e6,Pig
+GCA_029074685.1,#bfd3e6,Pig
+GCA_029074705.1,#810f7c,Unknown
+GCA_029074715.1,#bfd3e6,Pig
+GCA_029074745.1,#810f7c,Unknown
+GCA_029074765.1,#bfd3e6,Pig
+GCA_029074785.1,#bfd3e6,Pig
+GCA_029074805.1,#bfd3e6,Pig
+GCA_029074825.1,#bfd3e6,Pig
+GCA_029074835.1,#bfd3e6,Pig
+GCA_029074865.1,#bfd3e6,Pig
+GCA_029074885.1,#bfd3e6,Pig
+GCA_029074905.1,#bfd3e6,Pig
+GCA_029074915.1,#bfd3e6,Pig
+GCA_029074945.1,Vaccine
+GCA_029074955.1,#bfd3e6,Pig
+GCA_029074965.1,Vaccine
+GCA_029075005.1,#bfd3e6,Pig
+GCA_029075015.1,#bfd3e6,Pig
+GCA_029075045.1,#bfd3e6,Pig
+GCA_029075055.1,#bfd3e6,Pig
+GCA_029077385.1,Vaccine
+GCA_029077405.1,#bfd3e6,Pig
+GCA_029077425.1,#bfd3e6,Pig
+GCA_029077445.1,#bfd3e6,Pig
+GCA_029077455.1,#bfd3e6,Pig
+GCA_029077485.1,#bfd3e6,Pig
+GCA_029077505.1,#bfd3e6,Pig
+GCA_029077525.1,#bfd3e6,Pig
+GCA_029077545.1,#bfd3e6,Pig
+GCA_029077565.1,#bfd3e6,Pig
+GCA_029077585.1,#bfd3e6,Pig
+GCA_029077605.1,#bfd3e6,Pig
+GCA_029077625.1,#810f7c,Unknown
+GCA_029077635.1,#bfd3e6,Pig
+GCA_029077665.1,#bfd3e6,Pig
+GCA_029077685.1,#bfd3e6,Pig
+GCA_029077705.1,#810f7c,Unknown
+GCA_029077715.1,#bfd3e6,Pig
+GCA_029077745.1,#bfd3e6,Pig
+GCA_029102525.1,#bfd3e6,Pig
+GCA_029102535.1,#bfd3e6,Pig
+GCA_029102545.1,#bfd3e6,Pig
+GCA_029102585.1,#bfd3e6,Pig
+GCA_029102595.1,#bfd3e6,Pig
+GCA_031215075.1,#810f7c,Unknown
+GCA_033115815.1,#810f7c,Unknown
+GCA_033115835.1,#810f7c,Unknown
+GCA_033115845.1,#810f7c,Unknown
+GCA_033115855.1,#810f7c,Unknown
+GCA_033115885.1,#810f7c,Unknown
+GCA_035066585.1,#8c96c6,Otter
+GCA_036620455.1,#edf8fb,Human
+GCA_900448055.1,#810f7c,Unknown
+GCA_900637845.1,#bfd3e6,Pig
+GCA_947037165.1,#8856a7,Dolphin/Porpoise
+GCA_947037175.1,#8856a7,Dolphin/Porpoise
+GCA_947037435.1,#8856a7,Dolphin/Porpoise
+GCA_947037575.1,#8856a7,Dolphin/Porpoise
+GCA_947037675.1,#8856a7,Dolphin/Porpoise
+GCA_947038085.1,#8856a7,Dolphin/Porpoise
+GCA_947038205.1,#8856a7,Dolphin/Porpoise
+GCA_947038325.1,#8856a7,Dolphin/Porpoise
+GCA_947038705.1,#8856a7,Dolphin/Porpoise
+GCA_947038715.1,#8856a7,Dolphin/Porpoise
+GCA_947038735.1,#8856a7,Dolphin/Porpoise
+GCA_947038755.1,#8856a7,Dolphin/Porpoise
+GCA_947039675.1,#8856a7,Dolphin/Porpoise
+GCA_947039825.1,#8856a7,Dolphin/Porpoise
+GCA_947040135.1,#8856a7,Dolphin/Porpoise
+GCA_947040195.1,#8856a7,Dolphin/Porpoise
+GCA_947040235.1,#8856a7,Dolphin/Porpoise
+GCA_947041805.1,#8856a7,Dolphin/Porpoise

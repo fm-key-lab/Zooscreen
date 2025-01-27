@@ -1,0 +1,356 @@
+Name,final_id,ZooID,kraken2_top1_euk_genus,kraken2_top1_euk_genus_perc,kraken2_top2_euk_genus,kraken2_top2_euk_genus_perc,kraken2_top3_euk_genus,kraken2_top3_euk_genus_perc,comparison_result,classified,unclassified
+AZP-1,Ovis,Sheep/goat,Ovis,0.02,Mecyna,0.01,Phallusia,0.01,multiple - agree,230974,3378035
+AZP-2,Ovis/Capra,Sheep/goat,Pan,0.16,Homo,0.11,Ovis,0.04,multiple -no swap,418266,4508811
+AZP-3,Ovis/Capra,Sheep/goat,Erinaceus,0.08,Drosophila,0.01,Eupithecia,0.01,multiple -no swap,268881,3957669
+AZP-4,Ovis,Sheep/goat,Ovis,0.02,Bos,0.02,Drosophila,0.01,multiple - agree,310191,4005488
+AZP-5,Ovis,Sheep/goat,Ovis,0.01,Timema,0.01,Drosophila,0.01,multiple - agree,399615,4318238
+AZP-6,Ovis,Sheep/goat,Ovis,0.25,Bos,0.04,Rangifer,0.03,multiple - agree,334039,3719408
+AZP-7,Ovis/Capra,Sheep/goat,Canis,0.01,Rangifer,0.01,Mythimna,0.01,multiple -no swap,307867,3448785
+AZP-8,Ovis/Capra,Sheep/goat,Acomys,0.01,Mythimna,0.01,Eupithecia,0.01,multiple -no swap,493507,3533651
+AZP-9,Ovis,Sheep/goat,Ovis,0.09,Phallusia,0.02,Timema,0.01,multiple - agree,195789,3646714
+AZP-10,Vipera,Serpentes,Vipera,0.18,Ahaetulla,0.12,Pantherophis,0.08,agree,274883,5105887
+AZP-11,Ovis,Sheep goat or red deer,Timema,0.01,Anopheles,0.01,Eupithecia,0.01,disagree - low data,359374,4595746
+AZP-12,Bos,Cattle,Bos,0.05,Cervus,0.01,Canis,0.01,agree - low data,488552,4936653
+AZP-13,Chionomys,,Chionomys,0.29,Arvicola,0.29,Acomys,0.03,multiple - agree,693678,3721038
+AZP-14,Spermophilus,Spermophilus musicus,Mus,0.01,Canis,0.01,Erinaceus,0.01,disagree - low data,380477,4309538
+AZP-15,Chionomys,Spermophilus musicus,Chionomys,8.15,Arvicola,7.82,Onychomys,0.65,disagree - swap supported,1459773,2268423
+AZP-16,Canis,Dog,Canis,0.95,Drosophila,0.01,Acleris,0.01,agree,1150814,2914658
+AZP-17,Bos,Cattle,Canis,0.01,Eupithecia,0.01,Phallusia,0.01,disagree - low data,173858,3504548
+AZP-18,Bos,Cattle subadult (ca. 6 years),Danio,0.01,Drosophila,0.01,Anopheles,0.01,disagree - low data,203893,4500909
+AZP-19,Sus,Pig,Sus,0.05,Erinaceus,0.01,Xestia,0.01,agree - low data,380320,5999649
+AZP-20,Vulpes,Fox adult,Erinaceus,0.09,Phallusia,0.01,Anopheles,0.01,disagree - low data,264092,3140528
+AZP-21,Canis,Dog,Canis,0.02,Homo,0.02,Anopheles,0.01,agree - low data,216077,3556083
+AZP-22,Sus,Pig,Sus,1.02,Homo,0.03,Acleris,0.01,agree,372471,4506838
+AZP-23,Bos,Cattle,Eupithecia,0.01,Drosophila,0.01,Limnephilus,0.01,disagree - low data,243035,4097737
+AZP-24,Sus,Pig (domestic or wild),Homo,0.04,Eupithecia,0.01,Sus,0.01,disagree - low data,239755,4640412
+AZP-25,Canis,Dog,Danio,0.01,Schistosoma,0.01,Canis,0.01,disagree - low data,283694,4333108
+AZP-26,Canis,Dog,Tenthredo,0.08,Acleris,0.01,Schistosoma,0.01,disagree - low data,265836,3853710
+AZP-27,Canis,Dog,Bos,0.04,Danio,0.02,Timema,0.02,disagree - low data,381383,3661370
+AZP-28,Canis,Dog,Pseudochaenichthys,0.01,Mythimna,0.01,Canis,0.01,disagree - low data,309373,4126167
+AZP-29,Canis,Dog,Canis,0.07,Aquila,0.04,Schistosoma,0.01,agree - low data,320159,3863045
+AZP-30,Canis,Dog,Canis,0.13,Acomys,0.01,Chrysolina,0.01,agree,570157,4413647
+AZP-31,Bos,Cattle,Bos,0.01,Acleris,0.01,Canis,0.01,agree - low data,371834,3948053
+AZP-32,Bos,Cattle,Timema,0.01,Bos,0.01,Canis,0.01,disagree - low data,280289,4284437
+AZP-33,Sus,Pig,Athrips,0.02,Schistosoma,0.01,Drosophila,0.01,disagree - low data,246590,3965451
+AZP-34,Sus,Pig,Sus,0.06,Schistosoma,0.01,Limnephilus,0.01,agree - low data,355217,4021349
+AZP-35,Ovis,Sheep,Limnephilus,0.01,Acomys,0.01,Timema,0.01,disagree - low data,264509,3452547
+AZP-36,Bos,Cattle,Anopheles,0.01,Limnephilus,0.01,Mus,0.01,disagree - low data,228981,3894180
+AZP-37,Bos,Cattle,Mus,0.01,Limnephilus,0.01,Danio,0.01,disagree - low data,346028,4822456
+AZP-38,Canis,Dog,Canis,0.03,Schistosoma,0.01,Danio,0.01,agree - low data,399198,4157096
+AZP-39,Ovis,Sheep,Mus,0.01,Eupithecia,0.01,Ovis,0.01,disagree - low data,361911,4205671
+AZP-40,Sus,Pig,Limnephilus,0.01,Canis,0.01,Timema,0.01,disagree - low data,396142,4177408
+AZP-41,Bos,Cattle,Timema,0.01,Mus,0.01,Bos,0.01,disagree - low data,261840,3755676
+AZP-42,Sus,Pig,Erinaceus,0.1,Homo,0.01,Drosophila,0.01,disagree - swap not supported,246711,4295104
+AZP-43,Ovis,Sheep/goat,Ovis,0.02,Mus,0.01,Drosophila,0.01,multiple - agree,393040,4574307
+AZP-44,Ovis,Sheep/goat,Ovis,0.15,Bos,0.04,Rangifer,0.03,multiple - agree,315113,4465986
+AZP-45,Ovis/Capra,Sheep/goat,Erinaceus,0.06,Ovis,0.06,Canis,0.01,multiple -no swap,320666,4805458
+AZP-46,Canis,Dog?,Erinaceus,0.07,Acleris,0.01,Timema,0.01,disagree - low data,527781,5415506
+AZP-47,Sus,Pig,Danio,0.01,Schistosoma,0.01,Drosophila,0.01,disagree - low data,310680,4045651
+AZP-48,Sus,Pig,Phallusia,0.02,Limnephilus,0.01,Yponomeuta,0.01,disagree - low data,201468,3106969
+AZP-49,Sus,Pig,Erinaceus,0.05,Timema,0.02,Capitulum,0.01,disagree - low data,317572,3664271
+AZP-50,Canis,Dog,Erinaceus,0.09,Phallusia,0.02,Timema,0.01,disagree - low data,201584,3907495
+AZP-51,Ovis/Capra,Sheep/goat,Eupithecia,0.01,Canis,0.01,Limnephilus,0.01,multiple -no swap,246895,4544469
+AZP-52,Bos,Cattle,Anopheles,0.01,Timema,0.01,Bos,0.01,disagree - low data,294533,4767105
+AZP-53,Sus,Pig,Sus,0.07,Mythimna,0.01,Acleris,0.01,agree - low data,315207,3543412
+AZP-54,Ovis,Sheep,Ovis,0.03,Bos,0.02,Acleris,0.01,agree - low data,276390,3826657
+AZP-55,Bos,Cattle,Bos,0.04,Parastrongyloides,0.03,Anopheles,0.01,agree - low data,289385,5379519
+AZP-56,Ovis,Sheep,Ovis,0.02,Anopheles,0.01,Bos,0.01,agree - low data,281377,4558118
+AZP-57,Bos,Cattle,Agrochola,0.02,Bos,0.02,Epinotia,0.01,disagree - low data,457690,3883039
+AZP-58,Ovis,Sheep,Erinaceus,0.08,Anopheles,0.01,Limnephilus,0.01,disagree - low data,263606,4248764
+AZP-59,Sus,Pig,Erinaceus,0.01,Anopheles,0.01,Timema,0.01,disagree - low data,282561,3887366
+AZP-61,Homo,Human,Homo,1.07,Timema,0.04,Danio,0.03,agree,967978,3084128
+AZP-62,Sus,Pig,Sus,8.35,Canis,0.1,Homo,0.07,agree,721988,3461977
+AZP-63,Bos,Cattle,Erinaceus,0.07,Bos,0.06,Schistosoma,0.01,disagree - low data,396936,4273420
+AZP-64,Sus,Pig,Bos,0.38,Erinaceus,0.08,Rangifer,0.03,disagree - swap not supported,467425,3886206
+AZP-65,Sus,Pig,Sus,1.49,Canis,0.02,Homo,0.02,agree,690349,4065720
+AZP-66,Bos,Cattle,Bos,0.06,Drosophila,0.01,Eupithecia,0.01,agree - low data,545897,3821232
+AZP-67,Sus,Pig,Sus,0.02,Athrips,0.02,Schistosoma,0.01,agree - low data,510302,3918344
+AZP-68,Sus,Pig,Erinaceus,0.01,Anopheles,0.01,Sus,0.01,disagree - low data,571516,4241810
+AZP-69,Bos,Cattle,Bos,3.59,Rangifer,0.23,Cervus,0.18,agree,558759,2864255
+AZP-70,Cervus,Red deer,Bos,0.06,Erinaceus,0.05,Canis,0.03,disagree - low data,577257,3498081
+AZP-71,Bos,Cattle,Bos,3.51,Rangifer,0.3,Cervus,0.24,agree,869523,3550157
+AZP-72,Bos,Cattle,Bos,0.05,Danio,0.01,Eupithecia,0.01,agree - low data,551327,3977737
+AZP-73,Sus,Sheep/goat,Sus,1.36,Canis,0.06,Ovis,0.04,multiple - swap,606135,4233587
+AZP-75,Sus,Pig,Sus,2.01,Canis,0.03,Eptesicus,0.01,agree,847717,4453117
+AZP-77,Sus,Pig,Sus,0.18,Eupithecia,0.01,Canis,0.01,agree,389326,3663220
+AZP-78,Bos,Cattle,Bos,0.08,Erinaceus,0.08,Rangifer,0.01,agree - low data,311295,3514927
+AZP-79,Bos,Cattle,Danio,0.01,Drosophila,0.01,Anopheles,0.01,disagree - low data,175137,4098914
+AZP-80,Ovis,,Ovis,0.48,Bos,0.48,Sus,0.48,multiple - agree,114,306
+AZP-81,Canis,Dog,Homo,0.05,Canis,0.03,Anopheles,0.01,disagree - low data,310597,2916202
+AZP-82,Bos,Cattle,Bos,1.47,Canis,0.18,Rangifer,0.16,agree,2592578,12125113
+AZP-83,Bos,Cattle,Homo,0.04,Drosophila,0.01,Acomys,0.01,disagree - low data,3849091,17715545
+AZP-84,Equus,Horse,Bos,0.16,Homo,0.04,Canis,0.03,disagree - swap not supported,1220000,12278513
+AZP-85,Bos,Cattle,Bos,0.59,Homo,0.12,Canis,0.08,agree,874019,6542214
+AZP-86,Ovis,Sheep/goat,Ovis,20.92,Bos,4.24,Rangifer,2.87,multiple - agree,6741154,6259177
+AZP-87,Ovis,Sheep/goat,Ovis,2.27,Bos,0.46,Rangifer,0.33,multiple - agree,1991222,12633455
+AZP-88,Ovis,Sheep/goat,Ovis,5.29,Bos,1.08,Rangifer,0.72,multiple - agree,3686348,14790486
+AZP-89,Ovis,Sheep/goat,Ovis,19.88,Bos,4.17,Rangifer,2.92,multiple - agree,4526024,4460119
+AZP-90,Ovis,Sheep/goat,Ovis,9.53,Bos,2.04,Rangifer,1.41,multiple - agree,1002153,2461362
+AZP-91,Sus,Pig,Sus,5.7,Canis,0.1,Homo,0.07,agree,1745090,7722244
+AZP-92,Bos,Cattle,Bos,1.2,Rangifer,0.13,Cervus,0.11,agree,2167501,16699384
+AZP-93,Bos,Cattle,Bos,1.22,Rangifer,0.1,Cervus,0.08,agree,4124267,12910216
+AZP-94,Equus,Horse,Acomys,0.01,Limnephilus,0.01,Homo,0.01,disagree - low data,3743054,20433711
+AZP-95,Sus,Pig,Sus,0.43,Homo,0.17,Canis,0.14,agree,2500765,17958814
+AZP-96,Sus,Pig,Sus,0.36,Canis,0.05,Homo,0.04,agree,1879659,11255965
+AZP-97,Bos,Aurochs,Bos,0.83,Rangifer,0.09,Cervus,0.07,agree,4418335,16808126
+AZP-98,Bos,Cattle,Homo,0.03,Canis,0.02,Drosophila,0.01,disagree - low data,1873792,16172877
+AZP-99,Bos,Cattle,Bos,0.2,Canis,0.04,Homo,0.03,agree,7976584,23502122
+AZP-100,Bos,cow-size,Canis,0.06,Bos,0.02,Homo,0.02,disagree - low data,1433370,13082644
+AZP-101,Bos,cow-size,Bos,0.45,Canis,0.26,Homo,0.12,agree,2001106,16745399
+AZP-102,Sus,Wild pig,Homo,0.04,Limnephilus,0.01,Canis,0.01,disagree - low data,1213747,12526763
+AZP-103,Meles,Beaver,Meles,0.38,Canis,0.04,Lutra,0.03,agree,1865415,18768439
+AZP-104,Sus,Wild pig,Sus,0.09,Timema,0.01,Eupithecia,0.01,agree - low data,1893497,21222924
+AZP-105,Bos,Cattle,Cervus,0.12,Rangifer,0.02,Schistosoma,0.01,disagree - swap not supported,698715,8584391
+AZP-106,Cervus,Red deer,Cervus,0.02,Homo,0.02,Rangifer,0.01,agree - low data,1318328,13054249
+AZP-107,Sus,Pig/wild pig,Sus,0.1,Ypsolopha,0.01,Homo,0.01,agree,1628686,20072395
+AZP-108,Bos,Cattle,Bos,0.05,Drosophila,0.01,Rangifer,0.01,agree - low data,2052987,21097563
+AZP-109,Sus,Pig/wild pig,Sus,0.08,Canis,0.01,Danio,0.01,agree - low data,1290662,14368467
+AZP-110,Sus,Pig/wild pig,Homo,0.03,Timema,0.01,Canis,0.01,disagree - low data,1209379,11617691
+AZP-111,Sus,Pig/wild pig,Sus,0.03,Homo,0.02,Mythimna,0.01,agree - low data,2039297,16728310
+AZP-112,Sus,Pig/wild pig,Sus,0.08,Homo,0.02,Timema,0.01,agree - low data,2223706,22239973
+AZP-113,Sus,Pig/wild pig,Sus,0.03,Drosophila,0.01,Anopheles,0.01,agree - low data,4861405,35516444
+AZP-114,Sus,Pig/wild pig,Sus,1.46,Homo,0.15,Canis,0.02,agree,2795333,19522524
+AZP-115,Sus,Pig/wild pig,Phallusia,0.01,Drosophila,0.01,Timema,0.01,disagree - low data,4628840,29177530
+AZP-116,Ovis,Small ruminant,Ovis,0.3,Homo,0.1,Bos,0.05,multiple - agree,1930165,14662737
+AZP-117,Ovis,Small ruminant,Ovis,0.73,Bos,0.1,Rangifer,0.06,multiple - agree,780521,3535047
+AZP-118,Capra,Goat,Ovis,0.1,Homo,0.02,Mythimna,0.01,disagree - swap not supported,3095147,24079962
+AZP-119,Small ruminant,Small ruminant,Danio,0.01,Eupithecia,0.01,Parastrongyloides,0.01,multiple -no swap,4645514,12491997
+AZP-120,Ovis,Small ruminant,Ovis,0.03,Acleris,0.01,Acomys,0.01,multiple - agree,1457810,13406165
+AZP-121,Small ruminant,Small ruminant,Epinotia,0.01,Limnephilus,0.01,Yponomeuta,0.01,multiple -no swap,1790049,18156731
+AZP-122,Small ruminant,Small ruminant,Mus,0.01,Acomys,0.01,Anopheles,0.01,multiple -no swap,2238517,15747839
+AZP-123,Ovis,Small ruminant,Ovis,0.02,Danio,0.01,Canis,0.01,multiple - agree,1484031,11196004
+AZP-124,Sus,Wild pig,Homo,0.28,Sus,0.03,Drosophila,0.01,disagree - swap not supported,1994087,17806553
+AZP-125,Sus,Wild pig,Sus,5.91,Canis,0.06,Rangifer,0.04,agree,2566510,14031220
+AZP-126,Sus,Wild pig,Sus,0.1,Homo,0.02,Capitulum,0.01,agree,2679188,23123193
+AZP-127,Bos,Cattle,Bos,1.82,Rangifer,0.12,Cervus,0.1,agree,2811100,18745358
+AZP-128,Bos,Cattle,Bos,0.15,Homo,0.03,Rangifer,0.02,agree,1579098,17063281
+AZP-129,Bos,Cattle,Bos,0.36,Homo,0.03,Cervus,0.02,agree,2018614,21866213
+AZP-130,Bos,Cattle,Bos,0.36,Rangifer,0.02,Cervus,0.02,agree,1694341,16542354
+AZP-131,Bos,Cattle,Bos,0.1,Rangifer,0.01,Timema,0.01,agree,1028049,15812458
+AZP-132,Small ruminant,small ruminant,Sus,0.02,Homo,0.02,Eupithecia,0.01,multiple -no swap,1060367,11408330
+AZP-133,Cervus,Red deer,Phallusia,0.01,Anopheles,0.01,Mythimna,0.01,disagree - low data,1055858,13976598
+AZP-134,Sus,Wild pig,Eupithecia,0.01,Mythimna,0.01,Mus,0.01,disagree - low data,1657526,16220087
+AZP-135,Bos,Cattle,Eupithecia,0.01,Anopheles,0.01,Timema,0.01,disagree - low data,2591175,20546625
+AZP-136,Bos,Cattle,Bos,0.76,Cervus,0.04,Rangifer,0.04,agree,1942942,17695413
+AZP-137,Bos,Cattle,Timema,0.01,Acleris,0.01,Limnephilus,0.01,disagree - low data,578670,5016905
+AZP-138,Bos,Cattle,Bos,0.14,Cervus,0.01,Rangifer,0.01,agree,2883302,17801703
+AZP-139,Bos,Cattle,Canis,0.01,Limnephilus,0.01,Timema,0.01,disagree - low data,2262328,16265958
+AZP-140,Bos,Cattle,Cervus,0.03,Homo,0.02,Mythimna,0.01,disagree - low data,1032550,11097627
+AZP-141,Canis,Dog,Eupithecia,0.01,Capitulum,0.01,Anopheles,0.01,disagree - low data,2177041,16486688
+AZP-142,Sus,Pig,Sus,0.73,Mus,0.01,Canis,0.01,agree,1250757,9286232
+AZP-143,Ovis,Sheep,Ovis,0.32,Bos,0.13,Rangifer,0.08,agree,1576936,15042071
+AZP-144,Sus,Pig,Sus,0.47,Limnephilus,0.01,Acomys,0.01,agree,1540010,13139310
+AZP-145,Ovis,small ruminant,Ovis,2.63,Bos,0.61,Rangifer,0.42,multiple - agree,736161,2666683
+AZP-146,Bos,Cattle,Bos,0.05,Timema,0.01,Acleris,0.01,agree - low data,1253232,16297056
+AZP-147,Sus,Pig,Sus,0.09,Canis,0.01,Mythimna,0.01,agree - low data,3985225,23146490
+AZP-148,Canis,Dog,Canis,0.01,Timema,0.01,Anopheles,0.01,agree - low data,1236171,14294885
+AZP-149,Canis,Dog,Drosophila,0.01,Anopheles,0.01,Homo,0.01,disagree - low data,1359850,14222506
+AZP-150,Bos,Cattle,Bos,0.02,Anopheles,0.01,Drosophila,0.01,agree - low data,2523160,19253302
+AZP-151,Bos,Cattle,Bos,1.03,Rangifer,0.08,Cervus,0.07,agree,1879402,16998454
+AZP-152,Bos,Cattle,Camponotus,0.43,Bos,0.17,Sphaeramia,0.05,disagree - swap not supported,2495101,7339153
+AZP-153,Bos,Cattle,Homo,0.05,Bos,0.02,Mythimna,0.01,disagree - low data,1973018,18603118
+AZP-154,Bos,Cattle,Homo,0.02,Eupithecia,0.01,Celastrina,0.01,disagree - low data,1098308,14651183
+AZP-155,Ovis,Mammals,Ovis,0.11,Bos,0.05,Rangifer,0.04,multiple - agree,4841028,36665615
+AZP-156,Capra,Goat,Danio,0.01,Canis,0.01,Eupithecia,0.01,disagree - low data,2187020,20049341
+AZP-157,Canis,Dog,Bos,0.02,Homo,0.02,Canis,0.01,disagree - low data,1174747,11418049
+AZP-158,Bos,Cattle,Bos,0.04,Anopheles,0.01,Capitulum,0.01,agree - low data,1464416,10863852
+AZP-159,Bos,Cattle,Bos,0.22,Homo,0.02,Rangifer,0.02,agree,2197430,12571191
+AZP-160,Bos,Aurochs,Bos,0.03,Anopheles,0.01,Timema,0.01,agree - low data,978949,8525174
+AZP-161,Bos,Cattle,Bos,5.8,Rangifer,0.38,Cervus,0.31,agree,3405181,13149823
+AZP-162,Bos,Cattle,Homo,0.03,Bos,0.02,Danio,0.01,disagree - low data,1057038,10115300
+AZP-163,Bos,Cattle,Bos,0.75,Rangifer,0.05,Cervus,0.04,agree,2053161,12910383
+AZP-164,Bos,Cattle,Bos,0.03,Mythimna,0.01,Anopheles,0.01,agree - low data,1621273,12973748
+AZP-165,Bos,Cattle,Atethmia,0.02,Danio,0.01,Acleris,0.01,disagree - low data,2053476,20767441
+AZP-166,Bos,Cattle,Anopheles,0.01,Bos,0.01,Eupithecia,0.01,disagree - low data,2299721,19384415
+AZP-167,Bos,Cattle,Ovis,0.58,Bos,0.22,Rangifer,0.14,disagree - swap not supported,1915329,13792510
+AZP-168,Ovis,Sheep,Sus,0.05,Celastrina,0.01,Canis,0.01,disagree - low data,875410,11699426
+AZP-169,Bos,Indeterminate,Bos,1.52,Rangifer,0.1,Cervus,0.08,multiple - agree,1266595,9268017
+AZP-170,Bos,Cattle,Sus,0.06,Homo,0.02,Yponomeuta,0.01,disagree - low data,2121521,16117497
+AZP-171,Sus,Pig,Bos,0.06,Homo,0.04,Danio,0.01,disagree - low data,1546679,12849015
+AZP-172,Sus,Pig-size,Bos,0.16,Ovis,0.01,Anopheles,0.01,disagree - swap not supported,1110183,8392378
+AZP-173,Bos,Cattle,Ovis,0.5,Bos,0.19,Rangifer,0.12,disagree - swap not supported,1630690,9951026
+AZP-174,Bos,Small ruminant,Bos,0.13,Homo,0.06,Drosophila,0.01,multiple - agree,2391531,18910861
+AZP-175,Small ruminant,Small ruminant,Anopheles,0.01,Drepana,0.01,Timema,0.01,multiple -no swap,2168698,13542994
+AZP-176,Bos,Cattle,Mythimna,0.01,Bos,0.01,Drosophila,0.01,disagree - low data,3582288,17328730
+AZP-177,Bos,Cattle,Limnephilus,0.01,Canis,0.01,Epinotia,0.01,disagree - low data,1780913,17428271
+AZP-178,Bos,Cattle,Capitulum,0.01,Drosophila,0.01,Eupithecia,0.01,disagree - low data,2144806,17959125
+AZP-179,Bos,Cattle,Bos,0.06,Canis,0.01,Mythimna,0.01,agree - low data,2037363,15842592
+AZP-180,Bos,Cattle,Bos,0.02,Danio,0.01,Eupithecia,0.01,agree - low data,1360021,13384168
+AZP-181,Bos,Cattle,Schistosoma,0.01,Anopheles,0.01,Danio,0.01,disagree - low data,1136494,13752225
+AZP-182,Bos,Cattle,Bos,0.02,Anopheles,0.01,Schistosoma,0.01,agree - low data,1631566,16469087
+AZP-183,Bos,Cattle,Homo,0.01,Bos,0.01,Timema,0.01,disagree - low data,1774978,17392399
+AZP-184,Canis,Dog,Eupithecia,0.01,Anopheles,0.01,Timema,0.01,disagree - low data,1576390,20032045
+AZP-185,Ovis,Small ruminant,Ovis,0.61,Bos,0.16,Rangifer,0.11,multiple - agree,3756134,24041304
+AZP-186,Small ruminant,Small ruminant,Homo,0.02,Ovis,0.02,Mythimna,0.01,multiple -no swap,1775784,15296140
+AZP-187,Small ruminant,Small ruminant,Homo,0.02,Timema,0.01,Eupithecia,0.01,multiple -no swap,1946652,15947054
+AZP-188,Ovis,Sheep,Anopheles,0.01,Orthosia,0.01,Acleris,0.01,disagree - low data,1643208,15119091
+AZP-189,Small ruminant,Small ruminant,Mus,0.01,Limnephilus,0.01,Mythimna,0.01,multiple -no swap,1429344,14004955
+AZP-190,Ovis,Small ruminant,Ovis,0.1,Bos,0.05,Homo,0.04,multiple - agree,2483418,15643648
+AZP-191,Ovis,Small ruminant,Ovis,0.12,Bos,0.05,Cervus,0.03,multiple - agree,1560848,12064787
+AZP-192,Ovis,Small ruminant,Ovis,1.13,Bos,0.2,Rangifer,0.15,multiple - agree,2735605,18029629
+AZP-193,Ovis,Small ruminant,Ovis,0.07,Homo,0.05,Bos,0.02,multiple - agree,1809165,14526534
+AZP-194,Small ruminant,Small ruminant,Homo,0.05,Bos,0.04,Schistosoma,0.01,multiple -no swap,2263816,16904748
+AZP-195,Small ruminant,Small ruminant,Homo,0.05,Drosophila,0.01,Capitulum,0.01,multiple -no swap,1824375,16085694
+AZP-196,Bos,Cattle,Bos,0.12,Ovis,0.01,Limnephilus,0.01,agree,2493570,16976746
+AZP-197,Bos,Cattle,Bos,0.17,Homo,0.02,Rangifer,0.02,agree,1565347,16875889
+AZP-198,Gazella,Gazella,Timema,0.02,Podarcis,0.01,Xestia,0.01,disagree - low data,1192957,14225967
+AZP-199,Ovis,Gazella,Ovis,4.04,Bos,0.71,Rangifer,0.48,disagree - swap supported,1981190,9009649
+AZP-200,Ovis,Sheep,Ovis,3.08,Bos,0.56,Rangifer,0.41,agree,2712373,12774475
+AZP-201,Ovis,Sheep,Ovis,4.27,Bos,0.8,Rangifer,0.58,agree,3142092,13710342
+AZP-202,Small ruminant,Small ruminant,Homo,0.03,Ovis,0.02,Danio,0.01,multiple -no swap,1844833,13989983
+AZP-203,Ovis,Sheep,Ovis,5.21,Bos,0.75,Rangifer,0.5,agree,2850188,9948039
+AZP-204,Ovis,Sheep,Ovis,2.43,Bos,0.4,Rangifer,0.27,agree,2665264,12909978
+AZP-205,Ovis,Sheep,Ovis,13.03,Bos,2.34,Rangifer,1.72,agree,5938705,10836625
+AZP-206,Ovis,Sheep,Xestia,0.01,Epinotia,0.01,Danio,0.01,disagree - low data,1987288,21847142
+AZP-207,Ovis,Sheep,Ovis,6.79,Bos,1.27,Rangifer,0.91,agree,3574383,11234406
+AZP-208,Ovis,Small ruminant,Ovis,0.13,Bos,0.06,Rangifer,0.04,multiple - agree,2331789,16234696
+AZP-209,Ovis,Small ruminant,Ovis,0.13,Homo,0.09,Bos,0.03,multiple - agree,3563526,25503895
+AZP-210,Bos,Cattle,Timema,0.02,Homo,0.02,Danio,0.01,disagree - low data,1583923,14250202
+AZP-211,Bos,Cattle,Homo,0.02,Acleris,0.01,Anopheles,0.01,disagree - low data,1737924,14344368
+AZP-212,Ovis,Gazella,Ovis,1.66,Bos,0.65,Rangifer,0.41,disagree - swap supported,2685291,15083018
+AZP-213,Gazella,Gazella,Timema,0.01,Capitulum,0.01,Isoperla,0.01,disagree - low data,1541390,12648724
+AZP-214,Gazella,Gazella,Homo,0.01,Acomys,0.01,Mythimna,0.01,disagree - low data,1717853,14531079
+AZP-215,Bos,Cattle,Homo,0.05,Anas,0.01,Limnephilus,0.01,disagree - low data,1542398,14768769
+AZP-216,Ovis,Sheep,Ovis,4.06,Bos,0.8,Rangifer,0.57,agree,4568372,16247506
+AZP-217,Ovis,Small ruminant,Ovis,0.1,Homo,0.07,Bos,0.04,multiple - agree,2831351,17893049
+AZP-218,Small ruminant,Small ruminant,Danio,0.01,Drosophila,0.01,Timema,0.01,multiple -no swap,1537648,16535992
+AZP-219,Ovis,Small ruminant,Ovis,0.07,Homo,0.04,Bos,0.02,multiple - agree,1988580,15173415
+AZP-220,Ovis,Sheep,Ovis,0.03,Anopheles,0.01,Limnephilus,0.01,agree - low data,2406425,19435471
+AZP-221,Ovis,Small ruminant,Ovis,0.03,Rangifer,0.01,Drosophila,0.01,multiple - agree,1414472,16346016
+AZP-222,Ovis,Goat,Ovis,3.69,Bos,1.43,Rangifer,0.91,disagree - swap supported,4286936,11249584
+AZP-223,Ovis,Sheep,Homo,0.03,Ovis,0.03,Limnephilus,0.01,disagree - low data,2544804,14247305
+AZP-224,Capra,Goat,Ovis,0.36,Bos,0.14,Rangifer,0.09,disagree - swap not supported,2531522,17869257
+AZP-225,Ovis,Small ruminant,Ovis,0.27,Homo,0.17,Bos,0.12,multiple - agree,3544864,22496181
+AZP-226,Ovis,Small ruminant,Ovis,0.54,Bos,0.2,Rangifer,0.14,multiple - agree,3757844,19040183
+AZP-227,Ovis,Sheep,Ovis,8.34,Bos,1.6,Rangifer,1.17,agree,4253865,12417652
+AZP-228,Ovis,Sheep,Ovis,6.38,Bos,1.13,Rangifer,0.79,agree,5125293,16414858
+AZP-229,Small ruminant,Small ruminant,Homo,0.02,Ovis,0.02,Timema,0.01,multiple -no swap,1983419,16923464
+AZP-230,Ovis,Sheep,Ovis,12.76,Bos,2.36,Rangifer,1.69,agree,5660967,10240058
+AZP-231,Small ruminant,Small ruminant,Homo,0.03,Drosophila,0.01,Eupithecia,0.01,multiple -no swap,2507544,18282983
+AZP-232,Ovis,Small ruminant,Ovis,0.03,Homo,0.03,Capitulum,0.01,multiple - agree,2000604,15505990
+AZP-233,Ovis,Small ruminant,Ovis,0.27,Homo,0.11,Bos,0.05,multiple - agree,2259896,15024868
+AZP-234,Ovis,Goat,Ovis,1.77,Bos,0.64,Rangifer,0.41,disagree - swap supported,1952072,10598933
+AZP-235,Ovis,Goat,Ovis,8.28,Bos,3.06,Rangifer,1.98,disagree - swap supported,7598394,14263672
+AZP-236,Ovis,Small ruminant,Ovis,0.72,Bos,0.26,Rangifer,0.16,multiple - agree,2487070,15986982
+AZP-237,Small ruminant,Small ruminant,Homo,0.38,Ovis,0.26,Bos,0.11,multiple -no swap,2637384,16468682
+AZP-238,Ovis,Small ruminant,Ovis,21.19,Bos,4.02,Rangifer,2.91,multiple - agree,7562352,6805818
+AZP-239,Ovis,Sheep-size,Ovis,0.02,Bos,0.01,Danio,0.01,agree - low data,1890778,14824187
+AZP-240,Ovis,Sheep,Eupithecia,0.01,Ovis,0.01,Drosophila,0.01,disagree - low data,1814542,17308465
+AZP-241,Capra,Goat,Ovis,0.14,Bos,0.03,Rangifer,0.02,disagree - swap not supported,2336620,20709645
+AZP-242,Ovis,Sheep,Ovis,0.23,Bos,0.06,Homo,0.04,agree,162109,1222479
+AZP-243,Ovis,Sheep,Ovis,15.12,Bos,2.93,Rangifer,2.12,agree,6744397,10539493
+AZP-244,Capra,Goat,Ovis,0.03,Danio,0.01,Cervus,0.01,disagree - low data,2081105,15297858
+AZP-245,Ovis,Sheep,Ovis,0.1,Rangifer,0.02,Timema,0.02,agree,1199756,6874379
+AZP-246,Ovis,Sheep,Limnephilus,0.01,Anopheles,0.01,Danio,0.01,disagree - low data,2184174,23385269
+AZP-247,Canis,Dog,Canis,0.04,Homo,0.02,Limnephilus,0.01,agree - low data,2445486,18660388
+AZP-248,Vulpes,Fox,Canis,0.03,Timema,0.01,Acleris,0.01,disagree - low data,2393888,20082464
+AZP-249,Capra,Goat,Ovis,0.05,Bos,0.02,Limnephilus,0.01,disagree - low data,2193454,17206821
+AZP-250,Capra,Goat,Eupithecia,0.01,Timema,0.01,Epinotia,0.01,disagree - low data,1517577,14656109
+AZP-251,Ovis,Small ruminant,Ovis,0.03,Bos,0.01,Eupithecia,0.01,multiple - agree,1941165,16550233
+AZP-252,Equus,Equid,Mus,0.01,Drosophila,0.01,Acomys,0.01,disagree - low data,2289771,20349431
+AZP-253,Bos,Cattle,Xestia,0.01,Epinotia,0.01,Eilema,0.01,disagree - low data,910129,12883249
+AZP-254,Small ruminant,Small ruminant,Eupithecia,0.01,Mythimna,0.01,Danio,0.01,multiple -no swap,2087768,17682481
+AZP-255,Capra,Goat,Ovis,0.18,Rangifer,0.03,Bos,0.03,disagree - swap not supported,1408027,12734693
+AZP-256,Ovis,Small ruminant,Ovis,0.02,Eupithecia,0.01,Drosophila,0.01,multiple - agree,1159281,14856452
+AZP-257,Small ruminant,Small ruminant,Drosophila,0.01,Anopheles,0.01,Eupithecia,0.01,multiple -no swap,1355763,11904799
+AZP-258,Small ruminant,Small ruminant,Limnephilus,0.01,Eupithecia,0.01,Danio,0.01,multiple -no swap,1608416,17062947
+AZP-259,Ovis,Sheep,Ovis,0.01,Timema,0.01,Danio,0.01,agree - low data,1294852,13239758
+AZP-260,Capra,Goat,Ovis,0.05,Acomys,0.01,Eupithecia,0.01,disagree - low data,1999257,16313286
+AZP-261,Ovis,Small ruminant,Ovis,0.05,Homo,0.01,Cervus,0.01,multiple - agree,2013751,15504739
+AZP-262,Ovis,Small ruminant,Ovis,0.17,Bos,0.04,Homo,0.03,multiple - agree,2684411,19744025
+AZP-263,Capra,Goat,Ovis,0.56,Bos,0.25,Rangifer,0.17,disagree - swap not supported,2534238,17371374
+AZP-264,Ovis,Sheep,Homo,0.07,Ovis,0.04,Bos,0.02,disagree - low data,2498268,15872385
+AZP-265,Capra,Goat,Ovis,0.04,Bos,0.02,Timema,0.01,disagree - low data,1585345,16280805
+AZP-266,Ovis,Small ruminant,Ovis,1.8,Bos,0.89,Rangifer,0.58,multiple - agree,3411947,16416785
+AZP-267,Ovis,Small ruminant,Ovis,0.6,Bos,0.26,Rangifer,0.15,multiple - agree,2205741,17090256
+AZP-268,Ovis,Small ruminant,Ovis,4.71,Bos,1.88,Rangifer,1.22,multiple - agree,4350928,12161588
+AZP-269,Homo,Small ruminant,Homo,2.71,Ovis,0.12,Bos,0.05,multiple - swap,2780494,14668928
+AZP-270,Ovis,Small ruminant,Ovis,0.44,Bos,0.08,Rangifer,0.05,multiple - agree,2499507,18578331
+AZP-271,Ovis,Small ruminant,Ovis,0.02,Calamotropha,0.01,Anopheles,0.01,multiple - agree,1156420,14765276
+AZP-272,Ovis,Sheep,Ovis,0.88,Bos,0.36,Rangifer,0.23,agree,2224491,14153232
+AZP-273,Ovis,Small ruminant,Ovis,0.67,Bos,0.26,Rangifer,0.17,multiple - agree,2441583,17326810
+AZP-274,Ovis,Sheep,Ovis,0.12,Bos,0.05,Cervus,0.03,agree,3055993,17452916
+AZP-275,Ovis,Small ruminant,Ovis,0.07,Bos,0.03,Rangifer,0.02,multiple - agree,1490108,16779049
+AZP-276,Ovis,Sheep,Ovis,0.83,Homo,0.56,Bos,0.33,agree,2772335,15553138
+AZP-277,Bos,Small ruminant,Bos,0.91,Ovis,0.73,Rangifer,0.49,multiple - agree,3036327,16680955
+AZP-278,Ovis,Gazella,Ovis,22.25,Bos,4.37,Rangifer,3.07,disagree - swap supported,7322842,6574033
+AZP-279,Ovis,Gazella,Ovis,3.15,Bos,0.59,Rangifer,0.39,disagree - swap supported,2987080,14800972
+AZP-280,Gazella,Gazella,Ovis,0.59,Bos,0.25,Rangifer,0.16,disagree - swap not supported,1970910,15493508
+AZP-281,Ovis,Goat,Ovis,5.78,Bos,1.09,Rangifer,0.78,disagree - swap supported,3440797,11858945
+AZP-282,Ovis,Sheep,Ovis,5.71,Bos,1.12,Rangifer,0.77,agree,3160042,11602311
+AZP-283,Ovis,Sheep,Ovis,5.34,Bos,2.33,Rangifer,1.51,agree,6934252,15787902
+AZP-284,Capra,Goat,Acleris,0.01,Timema,0.01,Danio,0.01,disagree - low data,1778703,15025557
+AZP-285,Ovis,Sheep,Xestia,0.01,Heterocephalus,0.01,Limnephilus,0.01,disagree - low data,1202268,13368986
+AZP-286,Bos,Cattle,Bos,1.02,Rangifer,0.07,Cervus,0.06,agree,2742027,11627102
+AZP-287,Ovis,Small ruminant,Ovis,0.05,Macrobrachium,0.01,Schistosoma,0.01,multiple - agree,1009200,10808670
+AZP-288,Ovis,Sheep,Limnephilus,0.01,Anopheles,0.01,Acomys,0.01,disagree - low data,1738177,17087790
+AZP-289,Ovis,Sheep,Phallusia,0.56,Drosophila,0.45,Camponotus,0.45,disagree - swap not supported,464,432
+AZP-290,Ovis,Sheep,Sus,0.02,Drosophila,0.01,Erinaceus,0.01,disagree - low data,97240,1552226
+AZP-291,Sus,Pig,Cervus,0.06,Trisateles,0.01,Pipistrellus,0.01,disagree - low data,85677,1868054
+AZP-292,Sus,Pig,Sus,0.08,Danio,0.01,Yponomeuta,0.01,agree - low data,368045,4306519
+AZP-293,Sus,Pig,Sus,0.08,Danio,0.01,Yponomeuta,0.01,agree - low data,368045,4306519
+AZP-294,Sus,Pig,Sus,0.08,Danio,0.01,Yponomeuta,0.01,agree - low data,368045,4306519
+AZP-295,Sus,Pig,Sus,0.05,Canis,0.01,Anopheles,0.01,agree - low data,293576,3305922
+AZP-296,Sus,Pig,Sus,0.05,Canis,0.01,Anopheles,0.01,agree - low data,293576,3305922
+AZP-297,Sus,Pig,Xestia,0.01,Canis,0.01,Pipistrellus,0.01,disagree - low data,90888,1056800
+AZP-298,Bos,Cattle,Homo,0.56,Precis,0.02,Camelus,0.02,disagree - swap not supported,394960,3679193
+AZP-299,Bos,Cattle,Homo,0.56,Precis,0.02,Camelus,0.02,disagree - swap not supported,394960,3679193
+AZP-300,Bos,Cattle,Bos,0.14,Phallusia,0.01,Limnephilus,0.01,agree,362418,3566737
+AZP-301,Bos,Cattle,Bos,0.14,Phallusia,0.01,Limnephilus,0.01,agree,362418,3566737
+AZP-302,Bos,Cattle,Erinaceus,0.07,Homo,0.04,Lumbricus,0.01,disagree - low data,201340,2178749
+AZP-303,Bos,Cattle,Erinaceus,0.02,Danio,0.01,Timema,0.01,disagree - low data,128991,1859020
+AZP-304,Ovis/Capra,Sheep/ goat,Danio,0.01,Drosophila,0.01,Anopheles,0.01,multiple -no swap,125313,1750042
+AZP-305,Cervus,Red deer,Canis,0.01,Acleris,0.01,Timema,0.01,disagree - low data,159793,1841656
+AZP-306,Bos/Cervus,Cattle or elk,Homo,0.03,Danio,0.01,Eupithecia,0.01,multiple -no swap,158665,3220075
+AZP-307,Bos/Cervus,Cattle or elk,Homo,0.03,Danio,0.01,Eupithecia,0.01,multiple -no swap,158665,3220075
+AZP-308,Bos/Cervus,Cattle or elk,Erinaceus,0.02,Timema,0.01,Anopheles,0.01,multiple -no swap,116534,2079735
+AZP-309,Bos,Cattle,Bos,0.08,Timema,0.01,Mus,0.01,agree - low data,183047,1768783
+AZP-310,Bos,Cattle,Bos,0.28,Cervus,0.02,Rangifer,0.02,agree,782078,6691119
+AZP-311,Bos,Cattle,Bos,0.28,Cervus,0.02,Rangifer,0.02,agree,782078,6691119
+AZP-312,Bos,Cattle,Bos,0.28,Cervus,0.02,Rangifer,0.02,agree,782078,6691119
+AZP-313,Bos,Cattle,Bos,0.28,Cervus,0.02,Rangifer,0.02,agree,782078,6691119
+AZP-314,Bos,Cattle,Bos,0.35,Rangifer,0.03,Cervus,0.03,agree,386774,3358150
+AZP-315,Bos,Cattle,Bos,0.35,Rangifer,0.03,Cervus,0.03,agree,386774,3358150
+AZP-316,Bos,Cattle,Chionomys,0.91,Microtus,0.14,Arvicola,0.08,disagree - swap not supported,281174,3123570
+AZP-317,Bos,Cattle,Chionomys,0.91,Microtus,0.14,Arvicola,0.08,disagree - swap not supported,281174,3123570
+AZP-318,Bos,Cattle,Cricetulus,0.07,Chionomys,0.06,Onychomys,0.06,disagree - low data,85023,1460234
+AZP-319,Ovis,Sheep,Erinaceus,0.03,Ovis,0.03,Schistosoma,0.01,disagree - low data,415133,3215253
+AZP-320,Ovis,Sheep,Erinaceus,0.03,Ovis,0.03,Schistosoma,0.01,disagree - low data,415133,3215253
+AZP-321,Ovis,Sheep,Timema,0.01,Schistosoma,0.01,Canis,0.01,disagree - low data,864719,7024800
+AZP-322,Ovis,Sheep,Timema,0.01,Schistosoma,0.01,Canis,0.01,disagree - low data,864719,7024800
+AZP-323,Ovis,Sheep,Timema,0.01,Schistosoma,0.01,Canis,0.01,disagree - low data,864719,7024800
+AZP-324,Ovis,Sheep,Timema,0.01,Schistosoma,0.01,Canis,0.01,disagree - low data,864719,7024800
+AZP-325,Ovis,Sheep,Bos,0.05,Limnephilus,0.01,Eupithecia,0.01,disagree - low data,185531,1706910
+AZP-326,Bos,Cattle,Erinaceus,0.04,Eupithecia,0.01,Drosophila,0.01,disagree - low data,115587,1588164
+AZP-327,Bos,Cattle,Bos,0.03,Drosophila,0.01,Rangifer,0.01,agree - low data,436039,5138891
+AZP-328,Bos,Cattle,Bos,0.03,Drosophila,0.01,Rangifer,0.01,agree - low data,436039,5138891
+AZP-329,Bos,Cattle,Bos,0.03,Drosophila,0.01,Rangifer,0.01,agree - low data,436039,5138891
+AZP-330,Bos,Cattle,Bos,0.01,Drosophila,0.01,Acleris,0.01,agree - low data,139963,1509527
+AZP-331,Bos,Cattle,Erinaceus,0.06,Bos,0.02,Capitulum,0.01,disagree - low data,212650,1653275
+AZP-332,Bos,Cattle,Erinaceus,0.03,Bos,0.02,Orthosia,0.01,disagree - low data,361101,3273431
+AZP-333,Bos,Cattle,Erinaceus,0.03,Bos,0.02,Orthosia,0.01,disagree - low data,361101,3273431
+AZP-334,Bos,Cattle,Bos,0.7,Rangifer,0.07,Cervus,0.05,agree,126986,1126700
+AZP-335,Ovis,Sheep,Ovis,0.47,Bos,0.08,Rangifer,0.05,agree,271000,3616961
+AZP-336,Ovis,Sheep,Ovis,0.47,Bos,0.08,Rangifer,0.05,agree,271000,3616961
+AZP-337,Ovis,Sheep,Erinaceus,0.06,Bos,0.02,Acleris,0.01,disagree - low data,206289,1334064
+AZP-338,Bos,Cattle,Danio,0.02,Eupithecia,0.02,Timema,0.02,disagree - low data,214060,1677526
+AZP-339,Bos,Cattle/ sheep/ goat,Bos,0.25,Cervus,0.02,Rangifer,0.02,multiple - agree,467019,5255051
+AZP-340,Bos,Cattle/ sheep/ goat,Bos,0.25,Cervus,0.02,Rangifer,0.02,multiple - agree,467019,5255051
+AZP-341,Bos,Cattle/ sheep/ goat,Bos,0.25,Cervus,0.02,Rangifer,0.02,multiple - agree,467019,5255051
+AZP-342,Bos/Ovis/Capra,Cattle/ sheep/ goat,Erinaceus,0.1,Bos,0.02,Phallusia,0.01,multiple -no swap,101547,1374271
+AZP-343,Bos,Cattle,Homo,0.02,Drosophila,0.01,Phallusia,0.01,disagree - low data,207987,3246111
+AZP-344,Bos,Cattle,Homo,0.02,Drosophila,0.01,Phallusia,0.01,disagree - low data,207987,3246111
+AZP-345,Bos,Cattle,Bos,0.23,Homo,0.02,Rangifer,0.02,agree,94765,1488536
+AZP-346,Bos,Cattle,Precis,0.06,Homo,0.03,Acleris,0.01,disagree - low data,132484,1563229
+AZP-348,Bos,Cattle,Bos,0.15,Homo,0.08,Rangifer,0.01,agree,123550,1484855
+AZP-349,Bos,Cattle,Erinaceus,0.11,Bos,0.07,Homo,0.06,disagree - swap not supported,93849,1183032
+AZP-350,Bos,Cattle,Bos,0.08,Erinaceus,0.03,Rangifer,0.01,agree - low data,1261042,18781331
+AZP-351,Bos,Cattle,Bos,0.08,Erinaceus,0.03,Rangifer,0.01,agree - low data,1261042,18781331
+AZP-352,Bos,Cattle,Bos,0.08,Erinaceus,0.03,Rangifer,0.01,agree - low data,1261042,18781331
+AZP-353,Bos,Cattle,Bos,0.08,Erinaceus,0.03,Rangifer,0.01,agree - low data,1261042,18781331
+AZP-354,Bos,Cattle,Bos,0.07,Homo,0.02,Xestia,0.01,agree - low data,520628,4968343
+AZP-355,Bos,Cattle,Bos,0.36,Erinaceus,0.05,Cervus,0.03,agree,399202,4210936
+AZP-356,Bos,Cattle,Bos,0.16,Rangifer,0.02,Cervus,0.02,agree,191588,1540715
+AZP-357,Bos,Cattle,Erinaceus,0.14,Bos,0.07,Cervus,0.01,disagree - swap not supported,286461,3158671
+AZP-358,Bos,Cattle,Timema,0.02,Danio,0.01,Acomys,0.01,disagree - low data,318000,3557359
+AZP-359,Bos,Cattle,Danio,0.01,Eupithecia,0.01,Erinaceus,0.01,disagree - low data,274341,3262496

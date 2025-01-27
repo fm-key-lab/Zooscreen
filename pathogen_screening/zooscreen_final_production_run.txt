@@ -1,0 +1,266 @@
+Actinobacillus equuli
+Actinobacillus pleuropneumoniae
+African swine fever virus
+Aphthovirus
+Arcanobacterium bovis
+Arcanobacterium haemolyticum
+Aspergillus fumigatus
+Bartonella bacilliformis
+Bartonella henselae
+Bartonella quintana
+Blastomyces dermatitidis
+Bordetella bronchialis
+Bordetella bronchiseptica
+Bordetella genomosp. 13
+Bordetella pertussis
+Bordetella petrii
+Bordetella trematum
+Borrelia crocidurae
+Borrelia recurrentis
+Borreliella afzelii
+Borreliella burgdorferi
+Borreliella garinii
+Bovine rhinitis A virus
+Brucella abortus
+Brucella canis
+Brucella melitensis
+Brucella microti
+Brucella ovis
+Brucella suis
+Burkholderia cepacia
+Burkholderia gladioli
+Burkholderia mallei
+Burkholderia multivorans
+Burkholderia pseudomallei
+Campylobacter coli
+Campylobacter fetus
+Campylobacter gracilis
+Campylobacter showae
+Canine morbillivirus
+Chlamydia abortus
+Chlamydia caviae
+Chlamydia felis
+Chlamydia muridarum
+Chlamydia pecorum
+Chlamydia pneumoniae
+Chlamydia psittaci
+Chlamydia suis
+Chlamydia trachomatis
+Corynebacterium ammoniagenes
+Corynebacterium amycolatum
+Corynebacterium bovis
+Corynebacterium crudilactis
+Corynebacterium diphtheriae
+Corynebacterium jeikeium
+Corynebacterium kroppenstedtii
+Corynebacterium maris
+Corynebacterium matruchotii
+Corynebacterium minutissimum
+Corynebacterium pseudotuberculosis
+Corynebacterium renale
+Corynebacterium segmentosum
+Corynebacterium sphenisci
+Corynebacterium stationis
+Corynebacterium striatum
+Corynebacterium urealyticum
+Corynebacterium ureicelerivorans
+Corynebacterium xerosis
+Cowpox virus
+Coxiella burnetii
+Cryptosporidium
+Cryptosporidium parvum
+Deltaretrovirus
+Ehrlichia canis
+Enterococcus avium
+Enterococcus casseliflavus
+Enterococcus cecorum
+Enterococcus durans
+Enterococcus faecalis
+Enterococcus faecium
+Enterococcus hirae
+Enterococcus mundtii
+Enterovirus B
+Epizootic hemorrhagic disease virus (serotype 1 / strain New Jersey)
+Equine rhinitis A virus
+Erysipelothrix rhusiopathiae
+Erythroparvovirus
+Escherichia coli
+Escherichia coli O111
+Escherichia coli O157:H7
+Escherichia coli O26
+Francisella tularensis
+Fusobacterium
+Fusobacterium nucleatum
+Goatpox virus
+Haemophilus influenzae
+Haemophilus paraintluenzae
+Helicobacter cinaedi
+Helicobacter pylori
+Hepatitis B virus
+Hepatitis delta virus
+Hepatitis E virus
+Human adenovirus 1
+Human adenovirus 1
+Human adenovirus 2
+Human adenovirus 2
+Human adenovirus 35
+Human adenovirus 35
+Human adenovirus 5
+Human adenovirus 5
+Human adenovirus 54
+Human adenovirus 54
+Human adenovirus 7
+Human adenovirus 7
+Human alphaherpesvirus 1
+Human alphaherpesvirus 2
+Human alphaherpesvirus 3
+Human gammaherpesvirus 4
+Human herpesvirus 4 type 2
+Human mastadenovirus C
+JC polyomavirus
+Klebsiella aerogenes
+Klebsiella michiganensis
+Klebsiella oxytoca
+Klebsiella pneumoniae
+Klebsiella pneumoniae subsp. rhinoscleromatis
+Legionella anisa
+Legionella lansingensis
+Legionella pneumophila
+Leptospira alexanderi
+Leptospira alstonii
+Leptospira biflexa
+Leptospira borgpetersenii
+Leptospira broomii
+Leptospira fainei
+Leptospira inadai
+Leptospira interrogans
+Leptospira kirschneri
+Leptospira kmetyi
+Leptospira licerasiae
+Leptospira noguchii
+Leptospira santarosai
+Leptospira weilii
+Leptospira wolffii
+Listeria monocytogenes
+Lumpy skin disease virus
+Lymphocryptovirus
+Lyssavirus rabies
+Mannheimia haemolytica
+Measles morbillivirus
+Methanobrevibacter oralis
+Moraxella catarrhalis
+Morbillivirus
+Morbillivirus pecoris
+Mycobacterium avium
+Mycobacterium bovis
+Mycobacterium canettii
+Mycobacterium caprae
+Mycobacterium colombiense
+Mycobacterium intracellulare
+Mycobacterium kansasii
+Mycobacterium leprae
+Mycobacterium marseillense
+Mycobacterium sp. JS623
+Mycobacterium sp. YC-RL4
+Mycobacterium tuberculosis complex
+Mycobacterium tuberculosis variant africanum
+Mycobacterium tuberculosis variant bovis
+Mycobacteroides abscessus
+Mycoplasma haemocanis
+Mycoplasma haemofelis
+Mycoplasma mycoides
+Mycoplasma ovipneumoniae
+Mycoplasma pneumoniae
+Neisseria elongata
+Neisseria gonorrhoeae
+Neisseria meningitidis
+Neisseria mucosa
+Neisseria sicca
+Neisseria subflava
+Neisseria weaveri
+Orthohepadnavirus
+Orthopoxvirus
+Paraavulavirus
+Parvimonas micra
+Pasteurella multocida
+Peptostreptococcus anaerobius
+Polyomaviridae
+Porphyromonas gingivalis
+Porphyromonas gingivalis W83
+Rhodococcus equi
+Rickettsia africae
+Rickettsia akari
+Rickettsia conorii
+Rickettsia felis
+Rickettsia japonica
+Rickettsia prowazekii
+Rickettsia rickettsii
+Rickettsia sibirica
+Rickettsia typhi
+Salmonella enterica
+Salmonella enterica subsp. enterica
+Salmonella enterica subsp. enterica serovar Typhimurium
+Sheeppox virus
+Shigella boydii
+Shigella dysenteriae
+Shigella flexneri
+Shigella sonnei
+Simian virus 12
+Staphylococcus aureus
+Staphylococcus cohnii
+Staphylococcus epidermidis
+Staphylococcus equorum
+Staphylococcus hominis
+Staphylococcus nepalensis
+Staphylococcus saprophyticus
+Staphylococcus simulans
+Staphylococcus succinus
+Streptococcus agalactiae
+Streptococcus anginosus
+Streptococcus canis
+Streptococcus cristatus
+Streptococcus dysgalactiae
+Streptococcus equi
+Streptococcus gallolyticus
+Streptococcus gordonii
+Streptococcus gordonii str. Challis substr. CH1
+Streptococcus intermedius
+Streptococcus lutetiensis
+Streptococcus milleri
+Streptococcus mitis
+Streptococcus mutans
+Streptococcus oralis
+Streptococcus parauberis
+Streptococcus pneumoniae
+Streptococcus pyogenes
+Streptococcus salivarius
+Streptococcus sanguinis
+Streptococcus sp. HSISM1
+Streptococcus suis
+Streptococcus thermophilus
+Tannerella forsythia
+Tannerella forsythia 92A2
+Treponema
+Treponema denticola
+Treponema denticola ATCC 35405
+Treponema pallidum
+Treponema pallidum subsp. pallidum
+Treponema pallidum subsp. pertenue
+Veillonella parvula
+Vesicular stomatitis Indiana virus
+Vibrio anguillarum
+Vibrio cholerae
+Vibrio furnissii
+Vibrio parahaemolyticus
+Vibrio splendidus
+Vibrio vulnificus
+Yersinia aldovae
+Yersinia aleksiciae
+Yersinia enterocolitica
+Yersinia intermedia
+Yersinia pestis
+Yersinia pestis CO92
+Yersinia pseudotuberculosis
+Yersinia pseudotuberculosis complex
+Yersinia rohdei
+Yersinia ruckeri

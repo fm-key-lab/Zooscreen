@@ -1,0 +1,356 @@
+tax_id	scientific_name	sample_alias	sample_title	sample_description	project name	collection date	geographic location (country and/or sea)	geographic location (latitude)	geographic location (longitude)	broad-scale environmental context	local environmental context	environmental medium
+410658	Unknown mammalian metagenome	EASI230	MD_06	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (M3)
+410658	Unknown mammalian metagenome	EASI231	MD_11	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (M3)
+410658	Unknown mammalian metagenome	EASI232	MD_12	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (M3)
+410658	Unknown mammalian metagenome	EASI233	MD_13	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (M3)
+410658	Unknown mammalian metagenome	EASI234	MD_67	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (M2)
+410658	Unknown mammalian metagenome	EASI235	MD_71	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (pd4)
+410658	Unknown mammalian metagenome	EASI236	MD_72	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (pd4)
+410658	Unknown mammalian metagenome	EASI237	MD_73	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (pd4)
+410658	Unknown mammalian metagenome	EASI238	MD_74	Metagenome from archaeological sample	PRJEB63473	18.04.23	Turkmenistan	36.848333	60.417778	anatomical entity environment	bone	Tooth (pd4)
+410658	Serpentes metagenome	EASI239	BZNK-0024/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	45.67661	42.91509	anatomical entity environment	bone	Costa & Vertebrae
+410658	Ovis/Capra metagenome	EASI240	BZNK-1076/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.97728	43.51637	anatomical entity environment	bone	Incisor
+410658	Cattle metagenome	EASI241	BZNK-0273/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.92500	43.53000	anatomical entity environment	bone	Premolar (root)
+410658	Rodent metagenome	EASI242	BZNK-0830/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.84157	42.30286	anatomical entity environment	bone	Tooth
+410658	Spermophilus musicus metagenome	EASI243	BZNK-0855/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.84157	42.30286	anatomical entity environment	bone	Tooth + bone
+410658	Spermophilus musicus metagenome	EASI244	BZNK-0889	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.84176	42.29742	anatomical entity environment	bone	Skulls
+410658	C. familiaris metagenome	EASI245	BZNK-0262/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	45.72094	43.98044	anatomical entity environment	bone	Tooth
+410658	Cattle metagenome	EASI246	BZNK-0669/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	45.72094	43.98044	anatomical entity environment	bone	Tooth
+410658	Cattle metagenome	EASI247	BZNK-0891/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.80154	44.85261	anatomical entity environment	bone	Tooth (M1)
+410658	Sus metagenome	EASI248	BZNK-1281/3	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	43.80154	44.85261	anatomical entity environment	bone	Tooth (m2)
+410658	Vulpes vulpes metagenome	EASI249	BZNK-0783/1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Russia	44.04619	42.77540	anatomical entity environment	bone	Tooth
+410658	C. familiaris metagenome	EASI250	CR_001	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	49.99200	15.77686	anatomical entity environment	bone	Caninus superior sinister
+410658	Sus metagenome	EASI251	CR_002	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	49.99200	15.77686	anatomical entity environment	bone	Scapula dextra
+410658	Cattle metagenome	EASI252	CR_003	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.07978	14.27706	anatomical entity environment	bone	Mandubula + dolars dextra
+410658	Pig (domestic or wild)	EASI253	CR_004	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.07978	14.27706	anatomical entity environment	bone	Molar 3 superior dexter
+410658	C. familiaris metagenome	EASI254	CR_005	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.40343	14.43944	anatomical entity environment	bone	Caninus inferior sinister
+410658	C. familiaris metagenome	EASI255	CR_006	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.57479	13.68595	anatomical entity environment	bone	Caninus inferior dexter
+410658	C. familiaris metagenome	EASI256	CR_007	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.17039	14.48964	anatomical entity environment	bone	Incicivus 3 superior dexter
+410658	C. familiaris metagenome	EASI257	CR_008	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.17039	14.48964	anatomical entity environment	bone	Incicivus 3 superior dexter
+410658	C. familiaris metagenome	EASI258	CR_009	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.44265	14.14778	anatomical entity environment	bone	Premolar 3 inferior sinister
+410658	C. familiaris metagenome	EASI259	CR_010	Metagenome from archaeological sample	PRJEB63473	18.04.23	Czechia	50.13336	14.77475	anatomical entity environment	bone	Premolar 4 inferior dexter
+410658	Cattle metagenome	EASI260	Pet_001	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth
+410658	Cattle metagenome	EASI261	Pet_002	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth
+410658	Sus metagenome	EASI262	Pet_003	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth in bone
+410658	Sus metagenome	EASI263	Pet_004	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth in bone
+410658	Ovis metagenome	EASI264	Pet_005	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth with bone
+410658	Cattle metagenome	EASI265	Pet_006	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth with bone
+410658	Cattle metagenome	EASI266	Pet_007	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth
+410658	C. familiaris metagenome	EASI267	Pet_008	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth with bone (maxilla?)
+410658	Ovis metagenome	EASI268	Pet_009	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Sus metagenome	EASI269	Pet_010	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Cattle metagenome	EASI270	Pet_011	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth
+410658	Sus metagenome	EASI271	Pet_012	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth in bone
+410658	Ovis/Capra metagenome	EASI272	Pet_013	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth with bone
+410658	Ovis/Capra metagenome	EASI273	Pet_014	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Ovis/Capra metagenome	EASI274	Pet_015	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	C. familiaris metagenome	EASI275	Pet_016	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth with bone
+410658	Sus metagenome	EASI276	Pet_017	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth in bone
+410658	Sus metagenome	EASI277	Pet_018	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth with bone
+410658	Sus metagenome	EASI278	Pet_019	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth in bone
+410658	C. familiaris metagenome	EASI279	Pet_020	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	unknown bone
+410658	Ovis/Capra metagenome	EASI280	Pet_021	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Cattle metagenome	EASI281	Pet_022	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Sus metagenome	EASI282	Pet_023	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	unknown bone
+410658	Ovis metagenome	EASI283	Pet_024	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Cattle metagenome	EASI284	Pet_025	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Teeth in bone
+410658	Ovis metagenome	EASI285	Pet_026	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Cattle metagenome	EASI286	Pet_027	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Tooth
+410658	Ovis metagenome	EASI287	Pet_028	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Sus metagenome	EASI288	Pet_029	Metagenome from archaeological sample	PRJEB63473	18.04.23	Moldova	47.91704	27.87686		anatomical entity environment	bone	Mandible
+410658	Cattle metagenome	EASI292	IG-UAM/KA/7.F1/336	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	54.37069	18.61298	anatomical entity environment	bone	Phalanx I
+410658	Sus metagenome	EASI293	16616.F1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Cervical vertebra
+410658	Sus metagenome	EASI294	6816.F21	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Calcaneus
+410658	Cattle metagenome	EASI295	3916.F8	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Tarsals
+410658	Sus metagenome	EASI296	3916.F25	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Scapula
+410658	Sus metagenome	EASI297	3916.F31	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Tibia
+410658	Cattle metagenome	EASI298	9716.F4	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Rib
+410658	Cervus elaphus metagenome	EASI299	9716.F11	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Rib
+410658	Cattle metagenome	EASI300	6916.F1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Pelvis
+410658	Cattle metagenome	EASI301	6816.F8	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Phalanx I
+410658	Ovis/Capra metagenome	EASI302	6816.F29	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Radius
+410658	Cattle metagenome	EASI303	3716.F14	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Rib
+410658	Sus metagenome	EASI304	3716.F48	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Humerus
+410658	Ovis/Capra metagenome	EASI305	3716.F83	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Tibia
+410658	Sus metagenome	EASI306	17816.F16	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.32083	17.37361	anatomical entity environment	bone	Humerus
+410658	Cattle metagenome	EASI307	1/22.F1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	50.86582	21.49391	anatomical entity environment	bone	Femur
+410658	Cattle metagenome	EASI308	IG-UAM/KA/6.F1	Metagenome from archaeological sample	PRJEB63473	18.04.23	Poland	52.43778	18.74722	anatomical entity environment	bone	unknown bone
+410658	Blank control	EASI309	Control	Control from aDNA lab	PRJEB63473	19.04.23	aDNA lab	 MPIIB	52.5251432	13.3731493	anthropogenic entity environment	lab reagent	Water
+410658	metagenome	EASI001	AUTAWE85-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Humerus
+410658	metagenome	EASI002	AUTAWE85-002	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Scapula
+410658	metagenome	EASI003A	AUTAWE85-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI003B	AUTAWE85-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI003C	AUTAWE85-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI004A	AUTAWE85-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI004B	AUTAWE85-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI005	AUTAWE85-005	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Humerus
+410658	metagenome	EASI006A	AUTAWE85-007	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI006B	AUTAWE85-007	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI007A	AUTAWE85-011	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Metacarpal
+410658	metagenome	EASI007B	AUTAWE85-011	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Metacarpal
+410658	metagenome	EASI008	AUTAWE85-012	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tibia
+410658	metagenome	EASI009	AUTAWE85-016	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tibia
+410658	metagenome	EASI010	AUTAWE85-017	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Metatarsus
+410658	metagenome	EASI011	AUTAWE85-018	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI012A	AUTAWE85-020	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Vertebra lumbar
+410658	metagenome	EASI012B	AUTAWE85-020	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Vertebra lumbar
+410658	metagenome	EASI013	AUTAWE85-021	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Humerus
+410658	metagenome	EASI014	AUTAWE85-022	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Humerus
+410658	metagenome	EASI015A	AUTAWE85-023	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI015B	AUTAWE85-023	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI015C	AUTAWE85-023	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible with teeth
+410658	metagenome	EASI015D	AUTAWE85-023	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible with teeth
+410658	metagenome	EASI016A	AUTAWE85-025	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Alveolar fragment
+410658	metagenome	EASI016B	AUTAWE85-025	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI017A	AUTAWE85-026	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI017B	AUTAWE85-026	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI018	AUTAWE85-027	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31966	10.89153	anatomical entity environment	bone	Tibia
+410658	metagenome	EASI019A	AUTAWE111-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Alveolar section/septum
+410658	metagenome	EASI019B	AUTAWE111-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Alveolar section/septum
+410658	metagenome	EASI020A	AUTAWE111-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI020B	AUTAWE111-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI020C	AUTAWE111-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI020D	AUTAWE111-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.31421	10.89007	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI021	APOST-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI022	APOST-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI023A	APOST-005	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI023B	APOST-005	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI023C	APOST-005	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI024	APOST-006	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI025	APOST-009	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI026A	APOST-010	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI026B	APOST-010	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI027	APOST-011	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.29573	10.89103	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI028A	AUNIV-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.33266	10.895555	anatomical entity environment	bone	Phalanges 2
+410658	metagenome	EASI028B	AUNIV-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.33266	10.895555	anatomical entity environment	bone	Phalanges 2
+410658	metagenome	EASI029	AUNIV-002	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.33266	10.895555	anatomical entity environment	bone	Phalanx
+410658	metagenome	EASI030	AUNIV-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.33266	10.895555	anatomical entity environment	bone	Scapula
+410658	metagenome	EASI031A	ABU-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.323487	10.893034	anatomical entity environment	bone	Vertebra thoracic
+410658	metagenome	EASI031B	ABU-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.323487	10.893034	anatomical entity environment	bone	Vertebra thoracic
+410658	metagenome	EASI031C	ABU-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.323487	10.893034	anatomical entity environment	bone	Vertebra thoracic
+410658	metagenome	EASI032	ABU-002	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.323487	10.893034	anatomical entity environment	bone	Metacarpal
+410658	metagenome	EASI033A	KOK-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Alveolar fragment
+410658	metagenome	EASI033B	KOK-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI034	KOK-002	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI035	KOK-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI037	KOK-006	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI038	KOK-007	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI039A	KOK-009	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI039B	KOK-009	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI039C	KOK-009	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI039D	KOK-009	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.26656	10.87857	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI040	KAGN-001	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI041	KAGN-002	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI042	KAGN-003	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Mandible
+410658	metagenome	EASI043	KAGN-004	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI044	KAGN-005	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Tooth
+410658	metagenome	EASI045	KAGN-006	Metagenome from archaeological sample	PRJEB63473	20.09.20	Germany	48.22281	10.84499	anatomical entity environment	bone	Tooth
+410658	Canis metagenome	4609.F2	AZP_081	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Skull
+410658	Bos metagenome	6309.F2	AZP_082	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Femur
+410658	Bos metagenome	10209.F1	AZP_083	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Humerus
+410658	Equus metagenome	10809.F1	AZP_084	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Rib
+410658	Bos metagenome	11709.F1	AZP_085	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	13309.F3	AZP_086	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Rib
+410658	Ovis metagenome	13309.F4	AZP_087	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Radius
+410658	Ovis metagenome	13309.F5	AZP_088	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Radius
+410658	Ovis metagenome	13309.F6	AZP_089	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	13309.F7	AZP_090	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Tibia
+410658	Sus metagenome	14009.F1	AZP_091	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Humerus
+410658	Bos metagenome	16909.F4	AZP_092	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Lumbar vertebra
+410658	Bos metagenome	17009.F1	AZP_093	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Scapula
+410658	Equus metagenome	20509.F1	AZP_094	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Astragalus
+410658	Sus metagenome	23809.F6	AZP_095	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Fibula
+410658	Sus metagenome	26809.F1	AZP_096	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Humerus
+410658	Bos metagenome	26809.F3	AZP_097	Metagenome from archaeological sample	PRJEB63473	Poland	52.79886	18.26387	anatomical entity environment	bone	Calcaneus
+410658	Bos metagenome	C468.F8	AZP_098	Metagenome from archaeological sample	PRJEB63473	Poland	52.13764	20.52185	anatomical entity environment	bone	Vertebra	 thoracic
+410658	Bos metagenome	D1312.F37	AZP_099	Metagenome from archaeological sample	PRJEB63473	Poland	52.13764	20.52185	anatomical entity environment	bone	Femur
+410658	Bos metagenome	108.F55	AZP_100	Metagenome from archaeological sample	PRJEB63473	Poland	52.18091	20.74727	anatomical entity environment	bone	Long bone
+410658	Bos metagenome	108.F56	AZP_101	Metagenome from archaeological sample	PRJEB63473	Poland	52.18091	20.74727	anatomical entity environment	bone	Long bone
+410658	Sus metagenome	P04/F/041/F1	AZP_102	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Meles metagenome	P04/F/041/F2	AZP_103	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Pelvis
+410658	Sus metagenome	P04/F/041/F3	AZP_104	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Patella
+410658	Bos metagenome	P04/F/041/F4	AZP_105	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Carpal
+410658	Cervus metagenome	P04/F/041/F5	AZP_106	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Phalanx III
+410658	Sus metagenome	P04/F/051/F1	AZP_107	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metacarpal V
+410658	Bos metagenome	P06/F/318/F1	AZP_108	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Astragalus
+410658	Sus metagenome	P06/F/318/F2	AZP_109	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Maxilla
+410658	Sus metagenome	P06/F/318/F3	AZP_110	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Maxilla
+410658	Sus metagenome	P06/F/318/F4	AZP_111	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Sus metagenome	P06/F/318/F5	AZP_112	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Sus metagenome	P06/F/318/F6	AZP_113	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Ulna
+410658	Sus metagenome	P06/F/318/F7	AZP_114	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tarsals
+410658	Sus metagenome	P06/F/318/F8	AZP_115	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Skull
+410658	Ovis metagenome	P07/B/503/F1.1	AZP_116	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	P07/B/503/F1.2	AZP_117	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Capra metagenome	P08/F/904/F1	AZP_118	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Small ruminant metagenome	P09/B/705 /F1	AZP_119	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	P09/F/168/F1	AZP_120	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Small ruminant metagenome	P09/F/621/F1	AZP_121	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Small ruminant metagenome	P09/F/623/F1	AZP_122	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	P10/F/315/F1	AZP_123	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Sus metagenome	P11/F/516/F1	AZP_124	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Pelvis
+410658	Sus metagenome	P11/F/516/F2	AZP_125	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Lumbar vertebra
+410658	Sus metagenome	P11/F/516/F3	AZP_126	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Lumbar vertebra
+410658	Bos metagenome	P18/F-OST/180/F1	AZP_127	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Humerus
+410658	Bos metagenome	P18/F-OST/180/F2	AZP_128	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Bos metagenome	P18/F-OST/180/F3	AZP_129	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metatarsal III+IV
+410658	Bos metagenome	P18/F-OST/180/F4	AZP_130	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Pelvis
+410658	Bos metagenome	P18/F-OST/180/F5	AZP_131	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Astragalus
+410658	Small ruminant metagenome	P18/F-OST/180/F6	AZP_132	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Cervus metagenome	P18/F-OST/180/F7	AZP_133	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Sus metagenome	P18/F-OST/180/F8	AZP_134	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Bos metagenome	P18/F/718/F1	AZP_135	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P18/F/728/F1	AZP_136	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Astragalus
+410658	Bos metagenome	P18/F/736/F1	AZP_137	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P18/F/766/F1	AZP_138	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Calcaneus
+410658	Bos metagenome	P18/L/300bd/F1	AZP_139	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metacarpal III+IV
+410658	Bos metagenome	P18/L/300bd/F2	AZP_140	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metatarsal III+IV
+410658	Canis metagenome	P18/L/303/F1	AZP_141	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Sus metagenome	P18/L/310/F1	AZP_142	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	P18/L/310/F2	AZP_143	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Humerus
+410658	Sus metagenome	P18/L/311/F1	AZP_144	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Second phalanx
+410658	Ovis metagenome	P18/L/311/F2	AZP_145	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metacarpal III+IV
+410658	Bos metagenome	P18/L/313/F1	AZP_146	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Sus metagenome	P18/L/313/F2	AZP_147	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Canis metagenome	P18/T/200/F1	AZP_148	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Canis metagenome	P18/T/201/F1	AZP_149	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth (mandible)
+410658	Bos metagenome	P19/F-OST/178/F1	AZP_150	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/F-OST/194/F1	AZP_151	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	cervical vertebra
+410658	Bos metagenome	P19/F-OST/194/F2	AZP_152	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Bos metagenome	P19/F-OST/194/F3	AZP_153	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metatarsal III+IV
+410658	Bos metagenome	P19/F-OST/194/F4	AZP_154	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Indeterminate
+410658	Ovis metagenome	P19/F-OST/194/F5	AZP_155	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Capra metagenome	P19/F-OST/194/F6	AZP_156	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Canis metagenome	P19/F-OST/195/F1	AZP_157	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Bos metagenome	P19/F-OST/195/F2	AZP_158	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Bos metagenome	P19/F-OST/195/F3	AZP_159	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Metatarsal III+IV
+410658	Bos metagenome	P19/F-OST/195/F4	AZP_160	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Femur
+410658	Bos metagenome	P19/F-OST/195/F5	AZP_161	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Thoracic vertebra
+410658	Bos metagenome	P19/F-OST/218/F1	AZP_162	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Scapula
+410658	Bos metagenome	P19/F-OST/220/F1	AZP_163	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Pelvis
+410658	Bos metagenome	P19/F-OST/220/F2	AZP_164	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/F-OST/237/F1	AZP_165	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Bos metagenome	P19/F-OST/237/F2	AZP_166	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Mandible
+410658	Bos metagenome	P19/F-OST/238/F1	AZP_167	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Radius and ulna
+410658	Ovis metagenome	P19/F-OST/265/F1	AZP_168	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Indeterminate
+410658	Bos metagenome	P19/F-OST/277/F1	AZP_169	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Rib
+410658	Bos metagenome	P19/F-OST/277/F2	AZP_170	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Humerus
+410658	Sus metagenome	P19/F/907(a)/F1	AZP_171	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Long bone
+410658	Sus metagenome	P19/F/907(d)/F1	AZP_172	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Pelvis
+410658	Bos metagenome	P19/F/907(j)/F1	AZP_173	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/F907(j)/F2	AZP_174	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Caudal vertebra
+410658	Small ruminant metagenome	P19/F/939/F1	AZP_175	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/O/701/F1	AZP_176	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Third phalanx
+410658	Bos metagenome	P19/O/703/F1	AZP_177	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/O/704/F1	AZP_178	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/O/715/F1	AZP_179	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/O/715/F2	AZP_180	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/T/802/F1	AZP_181	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/T/807/F1	AZP_182	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth
+410658	Bos metagenome	P19/T/809/F1	AZP_183	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Astragalus
+410658	Canis metagenome	P19/W/660/F1	AZP_184	Metagenome from archaeological sample	PRJEB63473	Moldova	47.91704	27.87686	anatomical entity environment	bone	Tooth	 canine (mandible)
+410658	Ovis metagenome	TB08/KF-106/F1	AZP_185	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Small ruminant metagenome	TB08/KF-106/F2	AZP_186	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Cervical vertebra
+410658	Small ruminant metagenome	TB08/KF-124/F1	AZP_187	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB08/KF-147/F1	AZP_188	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Small ruminant metagenome	TB08/KF-147/F2	AZP_189	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB08/KF-152/F1	AZP_190	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Thoracic vertebra
+410658	Ovis metagenome	TB08/KF-152/F2	AZP_191	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	TB08/KF-152/F3	AZP_192	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	TB08/KF-154/F1	AZP_193	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tibia
+410658	Small ruminant metagenome	TB08/KF-154/F2	AZP_194	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Metatarsal III+IV
+410658	Small ruminant metagenome	TB08/KF-172/F1	AZP_195	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Bos metagenome	TB08/KF-172/F2	AZP_196	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Bos metagenome	TB08/KF-176/F1	AZP_197	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Astragalus
+410658	Gazella metagenome	TB08/KF-176/F2	AZP_198	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Ovis metagenome	TB08/KF-215/F1	AZP_199	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Ovis metagenome	TB08/KF-215/F2	AZP_200	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Metatarsal III+IV
+410658	Ovis metagenome	TB08/KF-215/F3	AZP_201	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Metatarsal III+IV
+410658	Small ruminant metagenome	TB08/KF-215/F4	AZP_202	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Long bone
+410658	Ovis metagenome	TB08/KF-216/F1	AZP_203	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Pelvis
+410658	Ovis metagenome	TB08/KF-216/F2	AZP_204	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Atlas
+410658	Ovis metagenome	TB08/KF-216/F3	AZP_205	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Axis
+410658	Ovis metagenome	TB08/KF-219/F1	AZP_206	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	TB08/KF-219/F2	AZP_207	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Calcaneus
+410658	Ovis metagenome	TB08/KF-224/F1	AZP_208	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tibia
+410658	Ovis metagenome	TB08/KF-224/F2	AZP_209	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Bos metagenome	TB08/KF-235/F1	AZP_210	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Bos metagenome	TB08/KF-235/F2	AZP_211	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	TB08/KF-236/F1	AZP_212	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Axis
+410658	Gazella metagenome	TB08/KF-236/F2	AZP_213	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Gazella metagenome	TB08/KF-253/F1	AZP_214	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Third phalanx
+410658	Bos metagenome	TB08/KF-253/F2	AZP_215	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	TB08/KF-255/F1	AZP_216	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB08/KF-255/F2	AZP_217	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Radius
+410658	Small ruminant metagenome	TB08/KF-266/F1	AZP_218	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB08/KF-302/F1	AZP_219	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Skull	 eye socket
+410658	Ovis metagenome	TB08/KF-302/F2	AZP_220	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-657/F1	AZP_221	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Skull
+410658	Ovis metagenome	TB10/KF-657/F2	AZP_222	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-657/F3	AZP_223	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Capra metagenome	TB10/KF-657/F4	AZP_224	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-657/F5	AZP_225	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-657/F6	AZP_226	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-696/F1	AZP_227	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Pelvis
+410658	Ovis metagenome	TB10/KF-696/F2	AZP_228	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Pelvis
+410658	Small ruminant metagenome	TB10/KF-711/F1	AZP_229	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-711/F2	AZP_230	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Calcaneus
+410658	Small ruminant metagenome	TB10/KF-711/F3	AZP_231	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-711/F4	AZP_232	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-743/F1	AZP_233	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-743/F2	AZP_234	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Atlas
+410658	Ovis metagenome	TB10/KF-743/F3	AZP_235	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Axis
+410658	Ovis metagenome	TB10/KF-743/F4	AZP_236	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Cervical vertebra
+410658	Small ruminant metagenome	TB10/KF-743/F5	AZP_237	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	TB10/KF-743/F6	AZP_238	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	TB10/KF-758/F1	AZP_239	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Long bone
+410658	Ovis metagenome	TB10/KF-758/F2	AZP_240	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Capra metagenome	TB10/KF-764/F1	AZP_241	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	TB10/KF-779/F1	AZP_242	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-779/F2	AZP_243	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Pelvis
+410658	Capra metagenome	TB10/KF-779/F3	AZP_244	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-779/F4	AZP_245	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-779/F5	AZP_246	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Canis metagenome	TB10/KF-792/F1	AZP_247	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth	 milk (mandible)
+410658	Vulpes metagenome	TB10/KF-792/F2	AZP_248	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth
+410658	Capra metagenome	TB10/KF-792/F3	AZP_249	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Capra metagenome	TB10/KF-792/F4	AZP_250	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-792/F5	AZP_251	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Equus metagenome	TB10/KF-795/F1	AZP_252	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth
+410658	Bos metagenome	TB10/KF-795/F2	AZP_253	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth
+410658	Small ruminant metagenome	TB10/KF-795/F3	AZP_254	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (maxilla)
+410658	Capra metagenome	TB10/KF-795/F4	AZP_255	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-795/F5	AZP_256	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Small ruminant metagenome	TB10/KF-795/F6	AZP_257	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Small ruminant metagenome	TB10/KF-795/F7	AZP_258	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-796/F1	AZP_259	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Capra metagenome	TB10/KF-796/F2	AZP_260	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-796/F3	AZP_261	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-799/F1	AZP_262	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Maxilla
+410658	Capra metagenome	TB10/KF-799/F2	AZP_263	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Mandible
+410658	Ovis metagenome	TB10/KF-799/F3	AZP_264	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Horn core
+410658	Capra metagenome	TB10/KF-799/F4	AZP_265	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Horn core
+410658	Ovis metagenome	TB10/KF-799/F5	AZP_266	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Thoracic vertebra
+410658	Ovis metagenome	TB10/KF-799/F6	AZP_267	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Thoracic vertebra
+410658	Ovis metagenome	TB10/KF-799/F7	AZP_268	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Thoracic vertebra
+410658	Small ruminant metagenome	TB10/KF-799/F8	AZP_269	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-799/F9	AZP_270	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-799/F10	AZP_271	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-799/F11	AZP_272	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Humerus
+410658	Ovis metagenome	TB10/KF-799/F12	AZP_273	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Radius
+410658	Ovis metagenome	TB10/KF-799/F13	AZP_274	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Radius
+410658	Ovis metagenome	TB10/KF-799/F14	AZP_275	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Ulna
+410658	Ovis metagenome	TB10/KF-799/F15	AZP_276	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Metacarpal III+IV
+410658	Bos metagenome	TB10/KF-799/F16	AZP_277	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Ovis metagenome	TB10/KF-799/F17	AZP_278	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Ovis metagenome	TB10/KF-799/F18	AZP_279	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Gazella metagenome	TB10/KF-799/F19	AZP_280	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Femur
+410658	Ovis metagenome	TB10/KF-799/F20	AZP_281	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Calcaneus
+410658	Ovis metagenome	TB10/KF-799/F21	AZP_282	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Calcaneus
+410658	Ovis metagenome	TB10/KF-799/F22	AZP_283	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Calcaneus
+410658	Capra metagenome	TB10/KF-799/F23	AZP_284	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	First phalanx
+410658	Ovis metagenome	TB10/KF-799/F24	AZP_285	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Bos metagenome	TB10/KF-802/F1	AZP_286	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Rib
+410658	Ovis metagenome	TB10/KF-804/F1	AZP_287	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth
+410658	Ovis metagenome	TB10/KF-816/F1	AZP_288	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Tooth (mandible)
+410658	Ovis metagenome	TB10/KF-904/F1	AZP_289	Metagenome from archaeological sample	PRJEB63473	Uzbekistan	37.700000	66.800000		anatomical entity environment	bone	Skull

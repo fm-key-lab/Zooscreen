@@ -1,0 +1,10 @@
+# table produced by calculations.DamageProfiler
+# using mapped file EASI241_rmdup.bam
+# Sample ID: EASI241_rmdup.bam
+DNA base frequencies Sample
+A	C	G	T
+0.317512972180117	0.1847072502764837	0.18328724343817623	0.31449253410522304
+
+DNA base frequencies Reference
+A	C	G	T
+0.3128821748631689	0.18898790628877438	0.18787354286261643	0.3102563759854403

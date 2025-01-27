@@ -1,0 +1,26 @@
+sample_name	isolation_source	geographic_source
+Streptococcus_gallolyticus_FDAARGOS_755	human	USA
+Streptococcus_gallolyticus_FDAARGOS_666	human	USA
+Streptococcus_equinus_MPR2	NA	USA
+Streptococcus_infantarius_Sb20	NA	USA
+Streptococcus_infantarius_45	NA	USA
+Streptococcus_equinus_pGA-7	NA	USA
+Streptococcus_gallolyticus_PMB1956	pig	USA
+Streptococcus_lutetiensis_FDAARGOS_1018	NA	Europe
+Streptococcus_lutetiensis_DSMZ_15350-TS	NA	Europe
+Streptococcus_infantarius_STR_HA7938AA	pig	USA
+Streptococcus_infantarius_BR_UFV05	pig	Brazil
+Streptococcus_infantarius_BR_UFV02	pig	Brazil
+Streptococcus_equinus_CMB014	cow	USA
+Streptococcus_equinus_CMB062	cow	USA
+Streptococcus_salivarius_BIOML-A25	human	USA
+Streptococcus_equinus_CNU_G6	cow	South Korea
+Streptococcus_sp_CMB018_equinus	cow	USA
+Streptococcus_lutetiensis_ICDDRB-NRC-S6	human	Bangladesh
+Streptococcus_lutetiensis_NCTC8738	NA	NA
+Streptococcus_lutetiensis_ICDDRB-NRC-S5	human	Bangladesh
+Sref	NA	NA
+AZP-223	sheep	Uzbekistan
+AZP-226	small ruminant	Uzbekistan
+AZP-283	sheep	Uzbekistan
+AZP-244	sheep	Uzbekistan
