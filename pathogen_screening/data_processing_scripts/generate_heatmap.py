@@ -35,6 +35,7 @@ for c in for_export.columns:
 
 
 columns=[dict_convert_sample_names[x.replace('.unmapped.rma6','')] for x in for_export.columns]
+columns.sort()
 for_export.columns=columns
 # set sample order
 #for_export=for_export[[x for x in sample_order_data if x in columns]]
@@ -50,3 +51,5 @@ for_export=for_export.sort_index()
 
 for_export.to_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv',sep='\t')
 
+
+# %%
