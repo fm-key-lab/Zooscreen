@@ -16,6 +16,11 @@ sample_name_conversions=np.loadtxt('/Users/ad_loris/Nextcloud/keylab/projects/ak
 dict_convert_sample_names={x[2]:x[3] for x in sample_name_conversions}
 
 zooscreen_heatmap_data = pd.read_csv('zooscreen_inhouse/heatmap_overview_Wevid.tsv', sep='\t', header=0,index_col=0)
+zooscreen_heatmap_data_conditional_10000_reads= pd.read_csv('conditional_10000_read_outputs/zooscreen_inhouse/heatmap_overview_Wevid.tsv', sep='\t', header=0,index_col=0) #condiitonal relaxation of read dist, when reads assigned >10000
+for x in zooscreen_heatmap_data_conditional_10000_reads:
+    for node_index in np.where(zooscreen_heatmap_data_conditional_10000_reads[x]==4)[0]:
+        node=zooscreen_heatmap_data_conditional_10000_reads.index[node_index]
+        zooscreen_heatmap_data[x].loc[node]=4
 tartu_heatmap_data = pd.read_csv('200423_tartu_data/heatmap_overview_Wevid.tsv', sep='\t', header=0,index_col=0)
 first_tartu_data = None
 # %%
@@ -26,21 +31,12 @@ for_export=pd.concat([tartu_heatmap_data, zooscreen_heatmap_data], axis=1, join=
 columns=[]
 for c in for_export.columns:
     c_stripped=c.replace('.unmapped.rma6','')
-    if c_stripped in dict_convert_sample_names:
-        columns.append(dict_convert_sample_names[c_stripped])
-    elif 'UDI' in c_stripped:
-        pass
-    else:
-        columns.append(f'{c_stripped.split(".")[3]}-{c_stripped.split(".")[4].split("_")[0]}')
-
+    columns.append(dict_convert_sample_names[c_stripped])
 
 columns=[dict_convert_sample_names[x.replace('.unmapped.rma6','')] for x in for_export.columns]
 columns.sort()
 for_export.columns=columns
-# set sample order
-#for_export=for_export[[x for x in sample_order_data if x in columns]]
-# reorder species
-#for_export=for_export.reindex(species_order_data)
+
 # standardize naming to human readable
 for_export=for_export.rename(index=lambda x: x.replace('_', ' '))
 
