@@ -1,0 +1,180 @@
+#!/usr/bin/env bash
+
+# Set default values
+output_dir=""
+input_path=""
+node_file=""
+reads="1"
+damage_cutoff="0"
+read_dist_cutoff="0"
+default_edit_dist="0.9"
+ancient_edit_dist="0.1"
+sequence_type="SE"
+num_threads="1"
+firm=false
+skip=false
+
+# Function to display usage information
+usage() {
+  echo "Usage: $0 [-O <OUTPUT DIR>] [-I <INPUT PATH>] [-n <NODE FILE>] [-b <MIN READS>] [-d <DAMAGE CUTOFF>] [-i <READ DIST CUTOFF>] [-e <DEFAULT EDIT DIST>] [-a <ANCIENT EDIT DIST>] [-s <SEQUENCE TYPE>] [-t <NUM THREADS>] [-F] [-S]"
+}
+
+# Parse command-line options
+while getopts "O:I:n:b:d:i:e:a:s:t:FSh" opt; do
+  case $opt in
+    O)
+      output_dir=$OPTARG
+      ;;
+    I)
+      input_path=$OPTARG
+      ;;
+    n)
+      node_file=$OPTARG
+      ;;
+    b)
+      reads=$OPTARG
+      ;;
+    d)
+      damage_cutoff=$OPTARG
+      ;;
+    i)
+      read_dist_cutoff=$OPTARG
+      ;;
+    e)
+      default_edit_dist=$OPTARG
+      ;;
+    a)
+      ancient_edit_dist=$OPTARG
+      ;;
+    s)
+      sequence_type=$OPTARG
+      ;;
+    t)
+      num_threads=$OPTARG
+      ;;
+    F)
+      firm=true
+      ;;
+    S)
+      skip=true
+      ;;
+    v)
+      version=true
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+# Validate the required options
+if [[ -z $output_dir || -z $input_path ]]; then
+  echo "Output directory (-O) and input path (-I) are required options." >&2
+  usage
+  exit 1
+fi
+
+# Use the parsed options as needed
+echo "Output Directory: $output_dir"
+echo "Input Path: $input_path"
+echo "Node File: $node_file"
+echo "Read Required: $reads"
+echo "Damage Cutoff: $damage_cutoff"
+echo "Read Dist Cutoff: $read_dist_cutoff"
+echo "Default Edit Dist: $default_edit_dist"
+echo "Ancient Edit Dist: $ancient_edit_dist"
+echo "Sequence Type: $sequence_type"
+echo "Num Threads: $num_threads"
+echo "Firm: $firm"
+echo "Skip: $skip"
+
+## validation of environment ##
+
+if ! command -v rma2info &> /dev/null
+then
+    echo "[$0] ERROR: MEGAN's rma2info could not be found in your path. Check MEGAN6 (>= v6.21.7) installation. Consider using yaml from https://github.com/ilight1542/eager_postprocessing/tree/main/screening"
+    exit
+fi
+
+## modifying input and output to fullpath if relative
+if [[ $input_path != /* ]] ; then
+    input_path=$(pwd)/$input_path
+fi
+
+if [[ $output_dir != /* ]] ; then
+    output_dir=$(pwd)/$output_dir
+fi
+
+## declaring needed variables
+anc_runsum=ancient/RunSummary.txt
+def_runsum=default/RunSummary.txt
+anc_totalcount=ancient/TotalCount.txt
+def_totalcount=default/TotalCount.txt
+
+## creating output directory structure
+
+mkdir -p ${output_dir}/ancient/coverage/
+mkdir -p ${output_dir}/ancient/damageMismatch/
+mkdir -p ${output_dir}/ancient/editDistance/
+mkdir -p ${output_dir}/ancient/filterInformation/
+mkdir -p ${output_dir}/ancient/readDist/
+mkdir -p ${output_dir}/ancient/percentIdentity/
+mkdir -p ${output_dir}/default/coverage/
+mkdir -p ${output_dir}/default/damageMismatch/
+mkdir -p ${output_dir}/default/editDistance/
+mkdir -p ${output_dir}/default/filterInformation/
+mkdir -p ${output_dir}/default/readDist/
+mkdir -p ${output_dir}/default/percentIdentity/
+
+## collecting files
+for i in ${input_path}/*/results/maltextract/results/
+    do
+    cp ${i}/ancient/coverage/*.txt ${output_dir}/ancient/coverage/
+    cp ${i}/ancient/damageMismatch/*.txt ${output_dir}/ancient/damageMismatch/
+    cp ${i}/ancient/editDistance/*.txt ${output_dir}/ancient/editDistance/
+    cp ${i}/ancient/filterInformation/*.txt ${output_dir}/ancient/filterInformation/
+    cp ${i}/ancient/percentIdentity/*.txt ${output_dir}/ancient/percentIdentity/
+    cp ${i}/ancient/readDist/*.txt ${output_dir}/ancient/readDist/
+    cp ${i}/default/coverage/*.txt ${output_dir}/default/coverage/
+    cp ${i}/default/damageMismatch/*.txt ${output_dir}/default/damageMismatch/
+    cp ${i}/default/editDistance/*.txt ${output_dir}/default/editDistance/
+    cp ${i}/default/filterInformation/*.txt ${output_dir}/default/filterInformation/
+    cp ${i}/default/percentIdentity/*.txt ${output_dir}/default/percentIdentity/
+    cp ${i}/default/readDist/*.txt ${output_dir}/default/readDist/
+done
+
+## collapsing files 
+python3 ~/bin/merge_summary_maltextract.py -i ${input_path}/*/results/maltextract/results/${anc_runsum} -o RunSummary.txt
+mv RunSummary.txt ${output_dir}/ancient/
+python3 ~/bin/merge_summary_maltextract.py -i ${input_path}/*/results/maltextract/results/${def_runsum} -o RunSummary.txt
+mv RunSummary.txt ${output_dir}/default/
+python3 ~/bin/merge_summary_maltextract.py -i ${input_path}/*/results/maltextract/results/${anc_totalcount} -o TotalCount.txt
+mv TotalCount.txt ${output_dir}/ancient/
+python3 ~/bin/merge_summary_maltextract.py -i ${input_path}/*/results/maltextract/results/${def_totalcount} -o TotalCount.txt
+mv TotalCount.txt ${output_dir}/default/
+
+## running custom_postprocessing, defaults are defined at top of script, if not given in standard input
+if [[ ${firm} == false ]]; then
+    ~/post_screening_malt_updates/custom_postprocessing_test.AMPS.r -r ${output_dir} -n ${node_file} -t ${num_threads} -m def_anc -b ${reads} -d ${damage_cutoff} -c ${read_dist_cutoff} -e ${default_edit_dist} -a ${ancient_edit_dist} -s ${sequence_type}
+else
+    ~/post_screening_malt_updates/custom_postprocessing_test.AMPS.r -r ${output_dir} -n ${node_file} -t ${num_threads} -m def_anc -b ${reads} -d ${damage_cutoff} -c ${read_dist_cutoff} -e ${default_edit_dist} -a ${ancient_edit_dist} -s ${sequence_type} -f
+fi
+
+## runnning james' rma tabuliser
+if [[ $skip != true ]]; then
+    echo "running rma6 tabuliser from JFY"
+    mkdir -p ${output_dir}/rma6_collection
+    cp ${input_path}/*/results/metagenomic_classification/malt/*.rma6 ${output_dir}/rma6_collection
+    rma-tabuliser -d ${output_dir}/rma6_collection -t ${num_threads} -n
+    ## clean copied rma6 files
+    mv ${output_dir}/rma6_collection/count_table.tsv ${output_dir}/count_table.tsv
+    rm -r ${output_dir}/rma6_collection
+fi
+exit 0
+

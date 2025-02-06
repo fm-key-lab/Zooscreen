@@ -134,7 +134,7 @@ sampleName_corrections={
         'Pool-3-038-AZP-223_S42':'AZP-223',
         'Pool-3-041-AZP-226_S45':'AZP-226',
         'Pool-4-007-AZP-244_S8':'AZP-244',
-        'Pool-4-046-AZP-283_S47':'AZP-284' # ADJUSTED TO 284 due to index mislabelling!!!
+        'Pool-4-046-AZP-283_S47':'AZP-283' 
     } 
 
 for idx,n in enumerate(sampleNames):

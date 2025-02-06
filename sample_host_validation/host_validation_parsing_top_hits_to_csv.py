@@ -5,6 +5,9 @@ import os
 import gzip
 import glob
 import csv
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+import scipy.stats as sts
 # %% 
 os.chdir('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sample_host_validation')
 
@@ -26,6 +29,16 @@ for x,y in zip(tartu_ids_to_azp[0],tartu_ids_to_azp[1]):
         all_to_fill_double_extract_sample[x].append(y.replace('_','-'))
     else:
         all_to_fill_double_extract_sample[x]=[y.replace('_','-')]
+
+zooscreen_pathogen_samples=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv', sep='\t',index_col=0)
+
+# metadata on sample origins:
+zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,35,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
+zooscreen_samples_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
+
+# dictionary mapping site to country:
+site_to_country_mapping={x:y for x,y in zip(zooscreen_sample_sites_metadata['Site name'].to_list(),zooscreen_sample_sites_metadata['Country'].to_list())}
+labid_to_site_mapping={x:y for x,y in zip(zooscreen_samples_metadata['Lab ID'].to_list(),zooscreen_samples_metadata['Archaeological site'].to_list())}
 # %%
 def parse_gzipped_tsv_kingdom_metazoa(file_path):
     data = []
@@ -40,7 +53,6 @@ def parse_gzipped_tsv_kingdom_metazoa(file_path):
                     collecting = True
             if collecting:
                 data.append([x.strip() for x in row])
-
     return pd.DataFrame(data, columns=['proportion_reads', 'total_reads_at_or_below_node', 'total_reads_assigned_node', 'minimizers', 'distinct_minimizers', 'rank', 'taxid', 'name'])
 
 def parse_gzipped_tsv_total_reads_assinged(file_path):
@@ -55,6 +67,28 @@ def parse_gzipped_tsv_total_reads_assinged(file_path):
                 break
     return results_dict
 
+def parse_gzipped_tsv_bacteria(file_path):
+    data = []
+    collecting = False
+    with gzip.open(file_path, 'rt') as f:
+        reader = csv.reader(f,  delimiter='\t')
+        for row in reader:
+            if row[5].strip() == 'D':
+                if collecting:
+                    break
+                if row[7].strip() == 'Bacteria':
+                    collecting = True
+            if collecting:
+                data.append([x.strip() for x in row])
+    return pd.DataFrame(data, columns=['proportion_reads', 'total_reads_at_or_below_node', 'total_reads_assigned_node', 'minimizers', 'distinct_minimizers', 'rank', 'taxid', 'name'])
+
+def mean_confidence_interval(data, confidence=0.95): 
+    # adopted from https://stackoverflow.com/questions/15033511/compute-a-confidence-interval-from-sample-data#15034143
+    a = 1.0 * np.array(data)
+    n = len(a)
+    m, se = np.mean(a), sts.sem(a)
+    h = se * sts.t.ppf((1 + confidence) / 2., n-1)
+    return m, m-h, m+h
 # %% 
 contaminated_eukaryotic_genuses=['Cyprinus']
 name=[]
@@ -68,66 +102,60 @@ top_3_per=[]
 classified=[]
 unclassified=[]
 
+parsed_bacteria={}
+
+def helper_extract_genus(file_path,azp_id):
+    this_file_parsed=parse_gzipped_tsv_kingdom_metazoa(file_path)
+    this_file_parsed["proportion_reads"] = pd.to_numeric(this_file_parsed["proportion_reads"])
+    classified_unclassified=parse_gzipped_tsv_total_reads_assinged(file_path)
+    classified.append(int(classified_unclassified['classified']))
+    unclassified.append(int(classified_unclassified['unclassified']))
+    subset_df=this_file_parsed.query('rank == "G"').sort_values(by='proportion_reads',ascending=False)
+    filtered_df = subset_df[~subset_df['name'].isin(contaminated_eukaryotic_genuses)]
+    name.append(azp_id)
+    top3=np.array(filtered_df[['name','proportion_reads']].sort_values('proportion_reads',ascending=False)[:3]).flatten().tolist()
+    top_1.append(top3[0])
+    top_1_per.append(top3[1])
+    if len(top3)>2:
+        top_2.append(top3[2])
+        top_2_per.append(top3[3])
+    else:
+        top_2.append('NA')
+        top_2_per.append(np.NaN)
+    if len(top3)>4:
+        top_3.append(top3[4])
+        top_3_per.append(top3[5])
+    else:
+        top_3.append('NA')
+        top_3_per.append(np.NaN)
+    
+def helper_extract_genus_bacteria(file_path):
+    this_file_parsed_bacteria=parse_gzipped_tsv_bacteria(file_path)
+    this_file_parsed_bacteria["proportion_reads"] = pd.to_numeric(this_file_parsed_bacteria["proportion_reads"])
+
 for index,file_path in enumerate(glob.glob('k2_nt/*.gz')):
     this_file_basename=file_path.split('/')[1].split('_pe_k2_nt')[0]
     if 'AZP' in this_file_basename and '-E' not in this_file_basename:
         azp_id='AZP-'+this_file_basename.split('AZP-')[1].split('_')[0]
-        zoological_assign=ids_to_zoological_id_conversion_dict[azp_id]
-        this_file_parsed=parse_gzipped_tsv_kingdom_metazoa(file_path)
-        classified_unclassified=parse_gzipped_tsv_total_reads_assinged(file_path)
-        classified.append(int(classified_unclassified['classified']))
-        unclassified.append(int(classified_unclassified['unclassified']))
-        this_file_parsed["proportion_reads"] = pd.to_numeric(this_file_parsed["proportion_reads"])
-        subset_df=this_file_parsed.query('rank == "G"').sort_values(by='proportion_reads',ascending=False)
-        filtered_df = subset_df[~subset_df['name'].isin(contaminated_eukaryotic_genuses)]
-        name.append(azp_id)
-        zoological_assignment.append(zoological_assign)
-        top3=np.array(filtered_df[['name','proportion_reads']].sort_values('proportion_reads',ascending=False)[:3]).flatten().tolist()
-        top_1.append(top3[0])
-        top_1_per.append(top3[1])
-        if len(top3)>2:
-            top_2.append(top3[2])
-            top_2_per.append(top3[3])
-        else:
-            top_2.append('NA')
-            top_2_per.append(np.NaN)
-        if len(top3)>4:
-            top_3.append(top3[4])
-            top_3_per.append(top3[5])
-        else:
-            top_3.append('NA')
-            top_3_per.append(np.NaN)
+        if azp_id != 'AZP-289': # false mapping of library indexes, skip
+            helper_extract_genus(file_path,azp_id)
+            zoological_assign=ids_to_zoological_id_conversion_dict[azp_id]
+            zoological_assignment.append(zoological_assign)
+            parsed_bacteria[azp_id]=parse_gzipped_tsv_bacteria(file_path)
+    elif 'UDI_54' in this_file_basename:
+        print('UDI_54 processing')
+        zoological_assignment.append('Small ruminant')
+        helper_extract_genus(file_path,'AZP-289')
+        parsed_bacteria['AZP-289']=parse_gzipped_tsv_bacteria(file_path)
     elif 'Pool' not in this_file_basename:
         azp_id_list=all_to_fill_double_extract_sample[this_file_basename]
         for azp_id in azp_id_list:
             zoological_assign=ids_to_zoological_id_conversion_dict[this_file_basename]
-            this_file_parsed=parse_gzipped_tsv_kingdom_metazoa(file_path)
-            this_file_parsed["proportion_reads"] = pd.to_numeric(this_file_parsed["proportion_reads"])
-            classified_unclassified=parse_gzipped_tsv_total_reads_assinged(file_path)
-            classified.append(int(classified_unclassified['classified']))
-            unclassified.append(int(classified_unclassified['unclassified']))
-            subset_df=this_file_parsed.query('rank == "G"').sort_values(by='proportion_reads',ascending=False)
-            filtered_df = subset_df[~subset_df['name'].isin(contaminated_eukaryotic_genuses)]
-            name.append(azp_id)
             zoological_assignment.append(zoological_assign)
-            top3=np.array(filtered_df[['name','proportion_reads']].sort_values('proportion_reads',ascending=False)[:3]).flatten().tolist()
-            top_1.append(top3[0])
-            top_1_per.append(top3[1])
-            if len(top3)>2:
-                top_2.append(top3[2])
-                top_2_per.append(top3[3])
-            else:
-                top_2.append('NA')
-                top_2_per.append(np.NaN)
-            if len(top3)>4:
-                top_3.append(top3[4])
-                top_3_per.append(top3[5])
-            else:
-                top_3.append('NA')
-                top_3_per.append(np.NaN)
+            helper_extract_genus(file_path,azp_id)
+            parsed_bacteria[azp_id]=parse_gzipped_tsv_bacteria(file_path)
 
-
-
+        
 dict_for_df={'Name':name,
              'ZooID':zoological_assignment,
              'kraken2_top1_euk_genus':top_1,
@@ -139,11 +167,173 @@ dict_for_df={'Name':name,
              'classified':classified,
              'unclassified':unclassified}
 
-test=pd.DataFrame(data=dict_for_df)
+eukaryotic_classifications_top3=pd.DataFrame(data=dict_for_df)
+
+# %% Correlation of top eukaryote DNA % vs pathogen DNA %
+plotting_dict={}
+
+zooscreen_pathogen_samples=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv', sep='\t',index_col=0)
+for x in zooscreen_pathogen_samples.columns:
+    plotting_dict[x]={'top_genus_percent':0,'top_proportion_reads_bacteria':0}
+    name=x.replace('-00','-').replace('-0','-')
+    this_file_parsed_bacteria=parsed_bacteria[name]
+    pathogens=zooscreen_pathogen_samples[x]
+    print(name,eukaryotic_classifications_top3.loc[np.where(eukaryotic_classifications_top3.Name==name)[0]][['kraken2_top1_euk_genus_perc','classified']])
+    plotting_dict[x]['top_genus_percent']=eukaryotic_classifications_top3.loc[np.where(eukaryotic_classifications_top3.Name==name)[0]]['kraken2_top1_euk_genus_perc'].values[0]
+    for pathogen in pathogens[pathogens].index:
+        index_this_pathogen_in_kraken2=np.where(this_file_parsed_bacteria['name']==pathogen)[0]
+        if len(index_this_pathogen_in_kraken2)>0:
+            this_bacterial_hit=this_file_parsed_bacteria.loc[np.where(this_file_parsed_bacteria['name']==pathogen)[0]].to_dict()
+            proportion_this_bacterial_hit=[int(bact_reads) for bact_reads in this_bacterial_hit['total_reads_at_or_below_node'].values()][0]/(eukaryotic_classifications_top3.loc[np.where(eukaryotic_classifications_top3.Name==name)[0]]['classified'].values[0]+eukaryotic_classifications_top3.loc[np.where(eukaryotic_classifications_top3.Name==name)[0]]['unclassified'].values[0])
+            plotting_dict[x]['top_proportion_reads_bacteria']=max(plotting_dict[x]['top_proportion_reads_bacteria'],proportion_this_bacterial_hit)
+            print(this_file_parsed_bacteria.loc[np.where(this_file_parsed_bacteria['name']==pathogen)[0]].to_dict())
+    this_file_parsed_bacteria.loc[np.where(this_file_parsed_bacteria['name']==pathogen)[0]].to_dict()
+
+
+
+
+all_data_for_plotting=pd.DataFrame.from_dict(plotting_dict).transpose()
+
+plotting_data_from_dict=all_data_for_plotting[ (all_data_for_plotting.top_genus_percent>0.1)]
+
+country_to_plotting_data={}
+for sample_id,plotting_values in plotting_data_from_dict.iterrows():
+    this_sample_country=site_to_country_mapping[labid_to_site_mapping[sample_id]]
+    if this_sample_country not in country_to_plotting_data:
+        country_to_plotting_data[this_sample_country]={'x':[],'y':[]}
+    country_to_plotting_data[this_sample_country]['x'].append(np.log10(plotting_values['top_genus_percent']))
+    country_to_plotting_data[this_sample_country]['y'].append(np.log10(plotting_values['top_proportion_reads_bacteria']))
+
+# plotting
+fig, ax = plt.subplots(facecolor='white',figsize=(6,5))
+colors=['#ca0020','#f4a582','#92c5de','#0571b0']
+for country,color in zip(country_to_plotting_data,colors):
+    plt.scatter(country_to_plotting_data[country]['x'],country_to_plotting_data[country]['y'],label=country,c=color)
+plt.ylabel('Percentage reads assigned to top pathogen (log$_{10}$)')
+plt.xlabel("Percentage reads assigned to top eukaryotic genus (log$_{10}$)")
+plt.legend()
+plt.savefig('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/production_figures/percentage_euk_vs_pathogen.jpg',bbox_inches='tight')
+
+X,y=plotting_data_from_dict['top_genus_percent'] ,plotting_data_from_dict['top_proportion_reads_bacteria'] 
+
+X2 = sm.add_constant(X)
+est = sm.OLS(y, X2)
+est2 = est.fit()
+print(est2.summary())
+
+
+
+# %% Any sites with unexpectedly high/low preservation? (cutoff >1%)
+cutoff_well_preserved=1
+
+preservation_comparison_dataset={}
+totals={'success':0,'fail':0}
+for index,eukaryotic_classifications_top3_row in eukaryotic_classifications_top3.iterrows():
+    name=eukaryotic_classifications_top3_row['Name']
+    while len(name) < 7:
+        name=name.replace('-','-0')
+    if name in labid_to_site_mapping:
+        site=labid_to_site_mapping[name]
+        if site not in preservation_comparison_dataset:
+            preservation_comparison_dataset[site]={'success':0,'fail':0}
+        if eukaryotic_classifications_top3_row['kraken2_top1_euk_genus_perc']>cutoff_well_preserved:
+            preservation_comparison_dataset[site]['success']+=1
+            totals['success']+=1
+        else:
+            preservation_comparison_dataset[site]['fail']+=1
+            totals['fail']+=1
+
+for site in preservation_comparison_dataset:
+    chisq_contingency_dict={site:preservation_comparison_dataset[site],'other_sites':{'success':0,'fail':0}}
+    chisq_contingency_dict['other_sites']['success']=totals['success']-preservation_comparison_dataset[site]['success']
+    chisq_contingency_dict['other_sites']['fail']=totals['fail']-preservation_comparison_dataset[site]['fail']
+    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
+    chi_sq_results=sts.chi2_contingency(chi_sq_array)
+    if chi_sq_results.pvalue<(0.05/27):
+        print(site)
+        print('Chi-Sq contigency results:',chi_sq_results)
+        print('Observation:',chisq_contingency_dict)
+
+# %% site vs pathogen recovery?
+pathogen_recovery={}
+totals={'success':0,'fail':0}
+for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
+    site=zooscreen_samples_metadata_row['Archaeological site']
+    if site not in pathogen_recovery:
+        pathogen_recovery[site]={'success':0,'fail':0}
+    if zooscreen_samples_metadata_row['pathogen_recovered']:
+        pathogen_recovery[site]['success']+=1
+        totals['success']+=1
+    else:
+        pathogen_recovery[site]['fail']+=1
+        totals['fail']+=1
+
+for site in pathogen_recovery:
+    chisq_contingency_dict={site:pathogen_recovery[site],'other_sites':{'success':0,'fail':0}}
+    chisq_contingency_dict['other_sites']['success']=totals['success']-pathogen_recovery[site]['success']
+    chisq_contingency_dict['other_sites']['fail']=totals['fail']-pathogen_recovery[site]['fail']
+    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
+    chi_sq_results=sts.chi2_contingency(chi_sq_array)
+    if chi_sq_results.pvalue<(0.05/27):
+        print(site)
+        print('Chi-Sq contigency results:',chi_sq_results)
+        print('Observation:',chisq_contingency_dict)
+
+
+# %% skeletal element vs pathogen recovery?
+pathogeny_recovery_skeletal_elements={'tooth':{'success':0,'fail':0},'nontooth':{'success':0,'fail':0}}
+for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
+    element=zooscreen_samples_metadata_row['Element']
+    if 'Tooth' in element:
+        element='tooth'
+    else:
+        element='nontooth'
+    if zooscreen_samples_metadata_row['pathogen_recovered']:
+        pathogeny_recovery_skeletal_elements[element]['success']+=1
+    else:
+        pathogeny_recovery_skeletal_elements[element]['fail']+=1
+
+chi_sq_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements).transpose())
+chi_sq_results=sts.chi2_contingency(chi_sq_array)
+print('Chi-Sq contigency results:',chi_sq_results)
+print('Observation:',pathogeny_recovery_skeletal_elements)
+
+
+# %% Pathologies vs not for pathogen recovery?
+zooscreen_samples_metadata['pathogen_recovered']=np.isin(zooscreen_samples_metadata['Plotting ID'],zooscreen_pathogen_samples.columns)
+
+pathology_and_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']!='No') & (zooscreen_samples_metadata['pathogen_recovered']))
+pathology_no_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']!='No') & ~(zooscreen_samples_metadata['pathogen_recovered']))
+no_pathology_and_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']=='No') & (zooscreen_samples_metadata['pathogen_recovered']))
+no_pathology_no_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']=='No') & ~(zooscreen_samples_metadata['pathogen_recovered']))
+
+contingency_chisq_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
+
+sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+
+
+# %% # non pathology bones vs pathology bones
+pathogeny_recovery_skeletal_elements_nontooth_pathology={'nontooth_pathology':{'success':0,'fail':0},'nontooth_no_pathology':{'success':0,'fail':0}}
+for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
+    element=zooscreen_samples_metadata_row['Element']
+    if 'Tooth' not in element:
+        if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
+            pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_pathology']['success']+=1
+        elif zooscreen_samples_metadata_row['Palaeopathology'] != 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
+            pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_pathology']['fail']+=1
+        elif zooscreen_samples_metadata_row['Palaeopathology'] == 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
+            pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_no_pathology']['success']+=1
+        elif zooscreen_samples_metadata_row['Palaeopathology'] == 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
+            pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_no_pathology']['fail']+=1
+
+chi_sq_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements_nontooth_pathology).transpose())
+chi_sq_results=sts.chi2_contingency(chi_sq_array)
+print('Chi-Sq contigency results:',chi_sq_results)
+print('Observation:',pathogeny_recovery_skeletal_elements_nontooth_pathology)
+
 
 
 # %%
-
 zooid_to_genus={x:y for x,y in [('Aurochs', 'Bos'),
 ('Beaver', 'Meles'),
 ('Cattle', 'Bos'),
@@ -207,7 +397,7 @@ swap_status=[]
 swap_cutoff=1
 confirmation_cutoff=0.1
 final_id=[]
-for index,row in test.iterrows():
+for index,row in eukaryotic_classifications_top3.iterrows():
     zooid=row['ZooID']
     top_genus=row['kraken2_top1_euk_genus']
     top_genus_perc=row['kraken2_top1_euk_genus_perc']
@@ -244,12 +434,36 @@ for index,row in test.iterrows():
             swap_status.append('disagree - swap not supported')
             final_id.append(zooid_to_genus[zooid])
 
-test['comparison_result']=swap_status
-test['final_id']=final_id
-comparison_dataset=test[['Name', 'ZooID', 'kraken2_top1_euk_genus',
+eukaryotic_classifications_top3['comparison_result']=swap_status
+eukaryotic_classifications_top3['final_id']=final_id
+comparison_dataset=eukaryotic_classifications_top3[['Name', 'ZooID', 'kraken2_top1_euk_genus',
        'kraken2_top1_euk_genus_perc','final_id','comparison_result','classified','unclassified']]
+
+
+# getting summary stats:
+number_above_tenthpercent_cutoff=len(eukaryotic_classifications_top3[(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']>0.1)])
+percentage_above_tenthpercent_cutoff=number_above_tenthpercent_cutoff/len(eukaryotic_classifications_top3)
+print('number above tenth percentage cutoff for consideration:',number_above_tenthpercent_cutoff)
+print('percentage above tenth percentage cutoff for consideration:',percentage_above_tenthpercent_cutoff)
+
+agree_or_multiple=[x for x in eukaryotic_classifications_top3[(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']>0.1)]['comparison_result'].to_list() if 'disagree' not in x]
+agree_only=[x for x in agree_or_multiple if x != 'multiple -no swap']
+print('number above 0.1 threshold, which agree:',len(agree_only))
+print('percentage above 0.1 threshold of which agree:',len(agree_only)/number_above_tenthpercent_cutoff)
+
+# 1% cutoff
+number_above_onepercent_cutoff=len(eukaryotic_classifications_top3[(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']>1)])
+percentage_above_onepercent_cutoff=number_above_onepercent_cutoff/len(eukaryotic_classifications_top3)
+print('number above one percentage cutoff for consideration:',number_above_onepercent_cutoff)
+print('percentage above one percentage cutoff for consideration:',percentage_above_onepercent_cutoff)
+
+update_number=len([x for x in eukaryotic_classifications_top3[(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']>1)]['comparison_result'].to_list() if 'swap supported' in x])
+percentage_updated=update_number/number_above_onepercent_cutoff
+print('number above one percentage cutoff with host swap:',update_number)
+print('percentage above one percentage cutoff with host swap:',percentage_updated)
+
 # %%
-to_clean_for_output=pd.DataFrame(data=test)
+to_clean_for_output=pd.DataFrame(data=eukaryotic_classifications_top3)
 
 clean_name=[]
 for x in to_clean_for_output['Name']:
