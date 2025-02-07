@@ -169,6 +169,11 @@ dict_for_df={'Name':name,
 
 eukaryotic_classifications_top3=pd.DataFrame(data=dict_for_df)
 
+
+# %%
+# mean and median of top genus:
+print('mean top euk perc.',np.mean(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']))
+print('median top euk perc.',np.median(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']))
 # %% Correlation of top eukaryote DNA % vs pathogen DNA %
 plotting_dict={}
 
@@ -206,13 +211,13 @@ for sample_id,plotting_values in plotting_data_from_dict.iterrows():
 
 # plotting
 fig, ax = plt.subplots(facecolor='white',figsize=(6,5))
-colors=['#ca0020','#f4a582','#92c5de','#0571b0']
+colors=['#332288','#117733','#88CCEE','#CC6677']
 for country,color in zip(country_to_plotting_data,colors):
     plt.scatter(country_to_plotting_data[country]['x'],country_to_plotting_data[country]['y'],label=country,c=color)
 plt.ylabel('Percentage reads assigned to top pathogen (log$_{10}$)')
 plt.xlabel("Percentage reads assigned to top eukaryotic genus (log$_{10}$)")
 plt.legend()
-plt.savefig('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/production_figures/percentage_euk_vs_pathogen.jpg',bbox_inches='tight')
+plt.savefig('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/production_figures/percentage_euk_vs_pathogen.svg',bbox_inches='tight')
 
 X,y=plotting_data_from_dict['top_genus_percent'] ,plotting_data_from_dict['top_proportion_reads_bacteria'] 
 
