@@ -8,6 +8,7 @@ import csv
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import scipy.stats as sts
+from statsmodels.stats.multitest import multipletests
 # %% 
 os.chdir('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sample_host_validation')
 
@@ -226,7 +227,49 @@ est = sm.OLS(y, X2)
 est2 = est.fit()
 print(est2.summary())
 
+# %% pathology for specific animal samples?
+collapsing_dict={
+    'Cattle':'Bos'
+}
+patholgoy={'ruminants':{'pathology':0,'no_pathology':0}}
+ruminant_collapsed={'pathology':0,'no_pathology':0}
+totals={'pathology':0,'no_pathology':0}
+for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
+    taxonomy=zooscreen_samples_metadata_row['Taxonomic classification']
+    # correct cattle --> bos
+    if taxonomy in collapsing_dict:
+        taxonomy=collapsing_dict[taxonomy]
+    if taxonomy not in patholgoy:
+        patholgoy[taxonomy]={'pathology':0,'no_pathology':0}
+    if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' :
+        patholgoy[taxonomy]['pathology']+=1
+        totals['pathology']+=1
+    else:
+        patholgoy[taxonomy]['no_pathology']+=1
+        totals['no_pathology']+=1
+    # collapse ruminants
+    if taxonomy in ['Ovis','Ovis/Capra','Bos','Small ruminant','Cervus','Capra','Gazelle','Bos/Cervus']:
+        if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' :
+            patholgoy['ruminants']['pathology']+=1
+        else:
+            patholgoy['ruminants']['no_pathology']+=1
 
+p_values_pathology_species_comparisons=[]
+for site in patholgoy:
+    chisq_contingency_dict={site:patholgoy[site],'other_sites':{'pathology':0,'no_pathology':0}}
+    chisq_contingency_dict['other_sites']['pathology']=totals['pathology']-patholgoy[site]['pathology']
+    chisq_contingency_dict['other_sites']['no_pathology']=totals['no_pathology']-patholgoy[site]['no_pathology']
+    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
+    chi_sq_results=sts.chi2_contingency(chi_sq_array)
+    p_values_pathology_species_comparisons.append(chi_sq_results.pvalue)
+    print(site)
+    print('Chi-Sq contigency results:',chi_sq_results)
+    print('Observation:',chisq_contingency_dict)
+
+successful_comps_fdr=multipletests(p_values_pathology_species_comparisons,alpha=0.05,method='fdr_bh')[0]
+
+comparisons_conducted=np.array([x for x in patholgoy.keys()])
+comparisons_conducted[successful_comps_fdr]
 
 # %% Any sites with unexpectedly high/low preservation? (cutoff >1%)
 cutoff_well_preserved=1
@@ -248,17 +291,20 @@ for index,eukaryotic_classifications_top3_row in eukaryotic_classifications_top3
             preservation_comparison_dataset[site]['fail']+=1
             totals['fail']+=1
 
+p_values_site_comparisons_preservation=[]
 for site in preservation_comparison_dataset:
     chisq_contingency_dict={site:preservation_comparison_dataset[site],'other_sites':{'success':0,'fail':0}}
     chisq_contingency_dict['other_sites']['success']=totals['success']-preservation_comparison_dataset[site]['success']
     chisq_contingency_dict['other_sites']['fail']=totals['fail']-preservation_comparison_dataset[site]['fail']
     chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
     chi_sq_results=sts.chi2_contingency(chi_sq_array)
+    p_values_site_comparisons_preservation.append(chi_sq_results.pvalue)
     if chi_sq_results.pvalue<(0.05/27):
         print(site)
         print('Chi-Sq contigency results:',chi_sq_results)
         print('Observation:',chisq_contingency_dict)
 
+multipletests(p_values_site_comparisons_preservation,alpha=0.05,method='fdr_bh')
 # %% site vs pathogen recovery?
 pathogen_recovery={}
 totals={'success':0,'fail':0}
@@ -273,17 +319,20 @@ for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows(
         pathogen_recovery[site]['fail']+=1
         totals['fail']+=1
 
+p_values_site_comparisons_recovery=[]
 for site in pathogen_recovery:
     chisq_contingency_dict={site:pathogen_recovery[site],'other_sites':{'success':0,'fail':0}}
     chisq_contingency_dict['other_sites']['success']=totals['success']-pathogen_recovery[site]['success']
     chisq_contingency_dict['other_sites']['fail']=totals['fail']-pathogen_recovery[site]['fail']
     chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
     chi_sq_results=sts.chi2_contingency(chi_sq_array)
+    p_values_site_comparisons_recovery.append(chi_sq_results.pvalue)
     if chi_sq_results.pvalue<(0.05/27):
         print(site)
         print('Chi-Sq contigency results:',chi_sq_results)
         print('Observation:',chisq_contingency_dict)
 
+multipletests(p_values_site_comparisons_recovery,alpha=0.05,method='fdr_bh')
 
 # %% skeletal element vs pathogen recovery?
 pathogeny_recovery_skeletal_elements={'tooth':{'success':0,'fail':0},'nontooth':{'success':0,'fail':0}}
@@ -292,6 +341,7 @@ for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows(
     if 'Tooth' in element:
         element='tooth'
     else:
+        print(element)
         element='nontooth'
     if zooscreen_samples_metadata_row['pathogen_recovered']:
         pathogeny_recovery_skeletal_elements[element]['success']+=1
