@@ -1,6 +1,6 @@
 variable	values
 malt_extract_mode	def_anc
-malt_extract_output_folder	/ptmp/iclight/malt_reanalysis/zooscreen_final/zooscreen_inhouse
+malt_extract_output_folder	/ptmp/iclight/malt_reanalysis/zooscreen_final/zooscreen
 paired_end_mode	FALSE
 node_list	/u/iclight/zooscreen/zooscreen_final_production_run.txt
 damage_cutoff	0.1
