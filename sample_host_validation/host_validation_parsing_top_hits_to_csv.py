@@ -34,12 +34,34 @@ for x,y in zip(tartu_ids_to_azp[0],tartu_ids_to_azp[1]):
 zooscreen_pathogen_samples=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv', sep='\t',index_col=0)
 
 # metadata on sample origins:
-zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,35,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
+zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
 zooscreen_samples_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
 
+# fill counties for site data
+countries=[]
+for x in zooscreen_sample_sites_metadata['Country']:
+    if pd.isna(x):
+        countries.append(previous)
+    else:
+        previous=x
+        countries.append(previous)
+zooscreen_sample_sites_metadata['Country']=countries
+
 # dictionary mapping site to country:
+countries_not_considered_for_pathology=np.unique(zooscreen_sample_sites_metadata[(zooscreen_sample_sites_metadata['Investigated for Paleopathology']!='Yes')]['Country'].to_list())
 site_to_country_mapping={x:y for x,y in zip(zooscreen_sample_sites_metadata['Site name'].to_list(),zooscreen_sample_sites_metadata['Country'].to_list())}
+site_to_country_mapping['Augsburg']='Germany (Augsburg)'
 labid_to_site_mapping={x:y for x,y in zip(zooscreen_samples_metadata['Lab ID'].to_list(),zooscreen_samples_metadata['Archaeological site'].to_list())}
+
+# fill in if assessed site-by-site pathology
+pathology_assessed=[]
+for x in zooscreen_samples_metadata['Archaeological site']:
+    if site_to_country_mapping[x] not in countries_not_considered_for_pathology:
+        pathology_assessed.append(True)
+    else:
+        pathology_assessed.append(False)
+
+zooscreen_samples_metadata['pathology_assessed']=pathology_assessed
 # %%
 def parse_gzipped_tsv_kingdom_metazoa(file_path):
     data = []
@@ -228,13 +250,16 @@ est2 = est.fit()
 print(est2.summary())
 
 # %% pathology for specific animal samples?
+# ONLY consider samples which were assessed for pathologies
 collapsing_dict={
     'Cattle':'Bos'
 }
-patholgoy={'ruminants':{'pathology':0,'no_pathology':0}}
-ruminant_collapsed={'pathology':0,'no_pathology':0}
+patholgoy={'ruminants':{'pathology':0,'no_pathology':0},
+           'non_ruminants':{'pathology':0,'no_pathology':0}}
 totals={'pathology':0,'no_pathology':0}
-for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
+
+pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed']) & ~(zooscreen_samples_metadata['is_tooth']) ]
+for index,zooscreen_samples_metadata_row in pathology_assessed_samples_metadata.iterrows():
     taxonomy=zooscreen_samples_metadata_row['Taxonomic classification']
     # correct cattle --> bos
     if taxonomy in collapsing_dict:
@@ -248,11 +273,17 @@ for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows(
         patholgoy[taxonomy]['no_pathology']+=1
         totals['no_pathology']+=1
     # collapse ruminants
-    if taxonomy in ['Ovis','Ovis/Capra','Bos','Small ruminant','Cervus','Capra','Gazelle','Bos/Cervus']:
+    if taxonomy in ['Ovis','Ovis/Capra','Bos','Small ruminant','Cervus','Capra','Gazelle','Bos/Cervus','Gazella']:
         if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' :
             patholgoy['ruminants']['pathology']+=1
         else:
             patholgoy['ruminants']['no_pathology']+=1
+    else:
+        print(taxonomy)
+        if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' :
+            patholgoy['non_ruminants']['pathology']+=1
+        else:
+            patholgoy['non_ruminants']['no_pathology']+=1
 
 p_values_pathology_species_comparisons=[]
 for site in patholgoy:
@@ -355,16 +386,42 @@ print('Observation:',pathogeny_recovery_skeletal_elements)
 
 
 # %% Pathologies vs not for pathogen recovery?
+# ONLY consider sites which were assessed for pathologies
 zooscreen_samples_metadata['pathogen_recovered']=np.isin(zooscreen_samples_metadata['Plotting ID'],zooscreen_pathogen_samples.columns)
+tooth_bool=[]
+for x in zooscreen_samples_metadata['Element']:
+    if 'Tooth' in x:
+        tooth_bool.append(True)
+    else:
+        tooth_bool.append(False)
+zooscreen_samples_metadata['is_tooth']=tooth_bool
 
-pathology_and_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']!='No') & (zooscreen_samples_metadata['pathogen_recovered']))
-pathology_no_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']!='No') & ~(zooscreen_samples_metadata['pathogen_recovered']))
-no_pathology_and_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']=='No') & (zooscreen_samples_metadata['pathogen_recovered']))
-no_pathology_no_recovery=np.sum((zooscreen_samples_metadata['Palaeopathology']=='No') & ~(zooscreen_samples_metadata['pathogen_recovered']))
+pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed']) & ~(zooscreen_samples_metadata['is_tooth'])]
+
+
+pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
 
 contingency_chisq_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
+results_bone_only_pathology_to_hit=sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+print('Considering ONLY bones with vs bones without paleopathological lesions',results_bone_only_pathology_to_hit)
 
-sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+
+# with teeth included
+
+pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed'])]
+
+pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+
+contingency_chisq_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
+results_bone_and_tooth_pathology_to_hit=sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+
+print('considering also teeth',results_bone_and_tooth_pathology_to_hit)
 
 
 # %% # non pathology bones vs pathology bones
