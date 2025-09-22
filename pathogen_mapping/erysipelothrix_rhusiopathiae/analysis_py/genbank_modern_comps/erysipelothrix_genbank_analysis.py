@@ -50,7 +50,7 @@ ref_genome_folder='/Users/ad_loris/Nextcloud/keylab/reference_genomes/Erysipelot
 
 # for finding fixed mutations between samples
 filter_parameter_sample_across_sites = {\
-                                        'min_average_coverage_to_include_sample': 4,
+                                        'min_average_coverage_to_include_sample': 3,
                                         'min_ancient_covg_for_projection':0.05,  # low, since aDNA
                                         'min_basecalls_to_include_sample\ minimum_percent_genome_with_cov8plus': 0.1, # remove samples that have too many undefined base (ie. N). added this filter.
 }

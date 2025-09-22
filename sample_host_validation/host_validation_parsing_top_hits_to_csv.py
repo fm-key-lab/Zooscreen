@@ -34,8 +34,10 @@ for x,y in zip(tartu_ids_to_azp[0],tartu_ids_to_azp[1]):
 zooscreen_pathogen_samples=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv', sep='\t',index_col=0)
 
 # metadata on sample origins:
-zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
-zooscreen_samples_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
+zooscreen_sample_sites_metadata_former=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
+zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
+zooscreen_samples_metadata_former=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
+zooscreen_samples_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
 
 # fill counties for site data
 countries=[]
@@ -62,6 +64,28 @@ for x in zooscreen_samples_metadata['Archaeological site']:
         pathology_assessed.append(False)
 
 zooscreen_samples_metadata['pathology_assessed']=pathology_assessed
+
+# fill in if tooth
+tooth_bool=[]
+for x in zooscreen_samples_metadata['Skeletal element']:
+    if 'Tooth' in x:
+        tooth_bool.append(True)
+    else:
+        tooth_bool.append(False)
+zooscreen_samples_metadata['is_tooth']=tooth_bool
+
+pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed']) & ~(zooscreen_samples_metadata['is_tooth'])]
+
+
+# fill in if hit:
+pathogen_bool=[]
+for x in zooscreen_samples_metadata['Plotting ID']:
+    if x in zooscreen_pathogen_samples.columns:
+        pathogen_bool.append(True)
+    else: 
+        pathogen_bool.append(False)
+zooscreen_samples_metadata['pathogen_recovered']=pathogen_bool
+
 # %%
 def parse_gzipped_tsv_kingdom_metazoa(file_path):
     data = []
@@ -192,7 +216,22 @@ dict_for_df={'Name':name,
 
 eukaryotic_classifications_top3=pd.DataFrame(data=dict_for_df)
 
+# take only top library for kraken2 for samples with multiple libs
+cleaned_eukaryotic_classifications_top3={}
+for iter,row in eukaryotic_classifications_top3.iterrows():
+    this_sample=row.Name
+    if this_sample not in cleaned_eukaryotic_classifications_top3:
+        cleaned_eukaryotic_classifications_top3[this_sample]=row
+    else:
+        if row.kraken2_top1_euk_genus_perc > cleaned_eukaryotic_classifications_top3[this_sample].kraken2_top1_euk_genus_perc:
+            print(this_sample,'replace')
+            cleaned_eukaryotic_classifications_top3[this_sample]=row
+        else:
+            print(this_sample,"keep")
 
+eukaryotic_classifications_top3_cleaned=pd.DataFrame(data=cleaned_eukaryotic_classifications_top3)
+eukaryotic_classifications_top3_cleaned=eukaryotic_classifications_top3_cleaned.transpose().reset_index()
+eukaryotic_classifications_top3=eukaryotic_classifications_top3_cleaned
 # %%
 # mean and median of top genus:
 print('mean top euk perc.',np.mean(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']))
@@ -287,15 +326,15 @@ for index,zooscreen_samples_metadata_row in pathology_assessed_samples_metadata.
 
 p_values_pathology_species_comparisons=[]
 for site in patholgoy:
-    chisq_contingency_dict={site:patholgoy[site],'other_sites':{'pathology':0,'no_pathology':0}}
-    chisq_contingency_dict['other_sites']['pathology']=totals['pathology']-patholgoy[site]['pathology']
-    chisq_contingency_dict['other_sites']['no_pathology']=totals['no_pathology']-patholgoy[site]['no_pathology']
-    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
-    chi_sq_results=sts.chi2_contingency(chi_sq_array)
-    p_values_pathology_species_comparisons.append(chi_sq_results.pvalue)
+    fisher_exact_contingency_dict={site:patholgoy[site],'other_sites':{'pathology':0,'no_pathology':0}}
+    fisher_exact_contingency_dict['other_sites']['pathology']=totals['pathology']-patholgoy[site]['pathology']
+    fisher_exact_contingency_dict['other_sites']['no_pathology']=totals['no_pathology']-patholgoy[site]['no_pathology']
+    fisher_exact_array=np.array(pd.DataFrame.from_dict(fisher_exact_contingency_dict).transpose())
+    fisher_exact_results=sts.fisher_exact(fisher_exact_array)
+    p_values_pathology_species_comparisons.append(fisher_exact_results.pvalue)
     print(site)
-    print('Chi-Sq contigency results:',chi_sq_results)
-    print('Observation:',chisq_contingency_dict)
+    print('Fisher contigency results:',fisher_exact_results)
+    print('Observation:',fisher_exact_contingency_dict)
 
 successful_comps_fdr=multipletests(p_values_pathology_species_comparisons,alpha=0.05,method='fdr_bh')[0]
 
@@ -324,16 +363,16 @@ for index,eukaryotic_classifications_top3_row in eukaryotic_classifications_top3
 
 p_values_site_comparisons_preservation=[]
 for site in preservation_comparison_dataset:
-    chisq_contingency_dict={site:preservation_comparison_dataset[site],'other_sites':{'success':0,'fail':0}}
-    chisq_contingency_dict['other_sites']['success']=totals['success']-preservation_comparison_dataset[site]['success']
-    chisq_contingency_dict['other_sites']['fail']=totals['fail']-preservation_comparison_dataset[site]['fail']
-    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
-    chi_sq_results=sts.chi2_contingency(chi_sq_array)
-    p_values_site_comparisons_preservation.append(chi_sq_results.pvalue)
-    if chi_sq_results.pvalue<(0.05/27):
+    fisher_exact_contingency_dict={site:preservation_comparison_dataset[site],'other_sites':{'success':0,'fail':0}}
+    fisher_exact_contingency_dict['other_sites']['success']=totals['success']-preservation_comparison_dataset[site]['success']
+    fisher_exact_contingency_dict['other_sites']['fail']=totals['fail']-preservation_comparison_dataset[site]['fail']
+    fisher_exact_array=np.array(pd.DataFrame.from_dict(fisher_exact_contingency_dict).transpose())
+    fisher_exact_results=sts.fisher_exact(fisher_exact_array)
+    p_values_site_comparisons_preservation.append(fisher_exact_results.pvalue)
+    if fisher_exact_results.pvalue<(0.05/27):
         print(site)
-        print('Chi-Sq contigency results:',chi_sq_results)
-        print('Observation:',chisq_contingency_dict)
+        print('fisher exact results:',fisher_exact_results)
+        print('Observation:',fisher_exact_contingency_dict)
 
 multipletests(p_values_site_comparisons_preservation,alpha=0.05,method='fdr_bh')
 # %% site vs pathogen recovery?
@@ -352,16 +391,16 @@ for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows(
 
 p_values_site_comparisons_recovery=[]
 for site in pathogen_recovery:
-    chisq_contingency_dict={site:pathogen_recovery[site],'other_sites':{'success':0,'fail':0}}
-    chisq_contingency_dict['other_sites']['success']=totals['success']-pathogen_recovery[site]['success']
-    chisq_contingency_dict['other_sites']['fail']=totals['fail']-pathogen_recovery[site]['fail']
-    chi_sq_array=np.array(pd.DataFrame.from_dict(chisq_contingency_dict).transpose())
-    chi_sq_results=sts.chi2_contingency(chi_sq_array)
-    p_values_site_comparisons_recovery.append(chi_sq_results.pvalue)
-    if chi_sq_results.pvalue<(0.05/27):
+    fisher_exact_contingency_dict={site:pathogen_recovery[site],'other_sites':{'success':0,'fail':0}}
+    fisher_exact_contingency_dict['other_sites']['success']=totals['success']-pathogen_recovery[site]['success']
+    fisher_exact_contingency_dict['other_sites']['fail']=totals['fail']-pathogen_recovery[site]['fail']
+    fisher_exact_array=np.array(pd.DataFrame.from_dict(fisher_exact_contingency_dict).transpose())
+    fisher_exact_results=sts.fisher_exact(fisher_exact_array)
+    p_values_site_comparisons_recovery.append(fisher_exact_results.pvalue)
+    if fisher_exact_results.pvalue<(0.05/27):
         print(site)
-        print('Chi-Sq contigency results:',chi_sq_results)
-        print('Observation:',chisq_contingency_dict)
+        print('Fisher exact results:',fisher_exact_results)
+        print('Observation:',fisher_exact_contingency_dict)
 
 multipletests(p_values_site_comparisons_recovery,alpha=0.05,method='fdr_bh')
 
@@ -379,33 +418,24 @@ for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows(
     else:
         pathogeny_recovery_skeletal_elements[element]['fail']+=1
 
-chi_sq_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements).transpose())
-chi_sq_results=sts.chi2_contingency(chi_sq_array)
-print('Chi-Sq contigency results:',chi_sq_results)
+fisher_exact_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements).transpose())
+fisher_exact_results=sts.fisher_exact(fisher_exact_array)
+print('Fisher exact contigency results:',fisher_exact_results)
 print('Observation:',pathogeny_recovery_skeletal_elements)
 
 
 # %% Pathologies vs not for pathogen recovery?
 # ONLY consider sites which were assessed for pathologies
 zooscreen_samples_metadata['pathogen_recovered']=np.isin(zooscreen_samples_metadata['Plotting ID'],zooscreen_pathogen_samples.columns)
-tooth_bool=[]
-for x in zooscreen_samples_metadata['Element']:
-    if 'Tooth' in x:
-        tooth_bool.append(True)
-    else:
-        tooth_bool.append(False)
-zooscreen_samples_metadata['is_tooth']=tooth_bool
+pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed']) & ~(zooscreen_samples_metadata['is_tooth']) ]
 
-pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed']) & ~(zooscreen_samples_metadata['is_tooth'])]
+pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
 
-
-pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
-pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
-no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
-no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
-
-contingency_chisq_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
-results_bone_only_pathology_to_hit=sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+contingency_fisher_exact_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
+results_bone_only_pathology_to_hit=sts.fisher_exact(contingency_fisher_exact_pathology_to_recovery)
 print('Considering ONLY bones with vs bones without paleopathological lesions',results_bone_only_pathology_to_hit)
 
 
@@ -413,13 +443,13 @@ print('Considering ONLY bones with vs bones without paleopathological lesions',r
 
 pathology_assessed_samples_metadata=zooscreen_samples_metadata[(zooscreen_samples_metadata['pathology_assessed'])]
 
-pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
-pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
-no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
-no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']!='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']!='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_and_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']=='No') & (pathology_assessed_samples_metadata['pathogen_recovered']))
+no_pathology_no_recovery=np.sum((pathology_assessed_samples_metadata['Palaeopathology classification']=='No') & ~(pathology_assessed_samples_metadata['pathogen_recovered']))
 
-contingency_chisq_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
-results_bone_and_tooth_pathology_to_hit=sts.chi2_contingency(contingency_chisq_pathology_to_recovery)
+contingency_fisher_exact_pathology_to_recovery=np.array([[pathology_and_recovery,pathology_no_recovery],[no_pathology_and_recovery,no_pathology_no_recovery]])
+results_bone_and_tooth_pathology_to_hit=sts.fisher_exact(contingency_fisher_exact_pathology_to_recovery)
 
 print('considering also teeth',results_bone_and_tooth_pathology_to_hit)
 
@@ -427,20 +457,20 @@ print('considering also teeth',results_bone_and_tooth_pathology_to_hit)
 # %% # non pathology bones vs pathology bones
 pathogeny_recovery_skeletal_elements_nontooth_pathology={'nontooth_pathology':{'success':0,'fail':0},'nontooth_no_pathology':{'success':0,'fail':0}}
 for index,zooscreen_samples_metadata_row in zooscreen_samples_metadata.iterrows():
-    element=zooscreen_samples_metadata_row['Element']
+    element=zooscreen_samples_metadata_row['Skeletal element']
     if 'Tooth' not in element:
-        if zooscreen_samples_metadata_row['Palaeopathology'] != 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
+        if zooscreen_samples_metadata_row['Palaeopathology classification'] != 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
             pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_pathology']['success']+=1
-        elif zooscreen_samples_metadata_row['Palaeopathology'] != 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
+        elif zooscreen_samples_metadata_row['Palaeopathology classification'] != 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
             pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_pathology']['fail']+=1
-        elif zooscreen_samples_metadata_row['Palaeopathology'] == 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
+        elif zooscreen_samples_metadata_row['Palaeopathology classification'] == 'No' and zooscreen_samples_metadata_row['pathogen_recovered']:
             pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_no_pathology']['success']+=1
-        elif zooscreen_samples_metadata_row['Palaeopathology'] == 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
+        elif zooscreen_samples_metadata_row['Palaeopathology classification'] == 'No' and not zooscreen_samples_metadata_row['pathogen_recovered']:
             pathogeny_recovery_skeletal_elements_nontooth_pathology['nontooth_no_pathology']['fail']+=1
 
-chi_sq_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements_nontooth_pathology).transpose())
-chi_sq_results=sts.chi2_contingency(chi_sq_array)
-print('Chi-Sq contigency results:',chi_sq_results)
+fisher_exact_array=np.array(pd.DataFrame.from_dict(pathogeny_recovery_skeletal_elements_nontooth_pathology).transpose())
+fisher_exact_results=sts.fisher_exact(fisher_exact_array)
+print('Fisher exact results:',fisher_exact_results)
 print('Observation:',pathogeny_recovery_skeletal_elements_nontooth_pathology)
 
 
