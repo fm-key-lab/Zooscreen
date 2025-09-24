@@ -281,7 +281,7 @@ called_100_modern_ingroup=np.where(np.sum(calls[:,((ingroup_modern_bool | outgro
 
 # ID any sites to set to N in ancient samples
 filter_parameter_site_per_projection = {\
-                                    'min_maf_for_call' : 0.90, 
+                                    'min_maf_for_call' : 1, 
                                     'min_qual_for_call' : 30,  
                                     'min_cov_on_pos' : 1}
 

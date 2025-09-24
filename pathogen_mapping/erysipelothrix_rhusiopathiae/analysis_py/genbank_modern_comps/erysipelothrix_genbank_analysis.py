@@ -205,7 +205,7 @@ indel_support_all=indel_support
 indel_size_all=indel_size
 
 # %%
-pattern = re.compile('(?:ldo|EASI)') # string tag in sample Name to identify outgroup in staphAD data
+pattern = re.compile('(?:ldo|AZP-12)') # string tag in sample Name to identify outgroup in staphAD data
 ancient_name_all = np.array(list(filter(pattern.search, list(sampleNames))))
 ancient_bool_all = np.in1d(sampleNames , ancient_name_all)
 
@@ -313,7 +313,7 @@ called_100_modern_ingroup_outgroup=np.where(np.sum(calls[:,((ingroup_modern_bool
 
 # ID any sites to set to N in ancient samples
 filter_parameter_site_per_projection = {\
-                                    'min_maf_for_call' : 0.90, 
+                                    'min_maf_for_call' : 1, 
                                     'min_qual_for_call' : 30,  
                                     'min_cov_on_pos' : 1}
 
