@@ -34,9 +34,7 @@ for x,y in zip(tartu_ids_to_azp[0],tartu_ids_to_azp[1]):
 zooscreen_pathogen_samples=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/pathogen_screening/zooscreen_final/zooscreen_heatmap_merged.tsv', sep='\t',index_col=0)
 
 # metadata on sample origins:
-zooscreen_sample_sites_metadata_former=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
 zooscreen_sample_sites_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/AZP supplementary tables - Table S1_ Site info.tsv', sep='\t',skiprows=[0,36,37,38,39,40,41,42,43,44,45,46,47],header=0)
-zooscreen_samples_metadata_former=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/sequencing_informatino/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
 zooscreen_samples_metadata=pd.read_csv('/Users/ad_loris/Nextcloud/keylab/projects/ak_ancient_zoonosis_project/AZP supplementary tables - Table S2_ Sample info.tsv', sep='\t',skiprows=[0],header=0)
 
 # fill counties for site data
@@ -232,10 +230,16 @@ for iter,row in eukaryotic_classifications_top3.iterrows():
 eukaryotic_classifications_top3_cleaned=pd.DataFrame(data=cleaned_eukaryotic_classifications_top3)
 eukaryotic_classifications_top3_cleaned=eukaryotic_classifications_top3_cleaned.transpose().reset_index()
 eukaryotic_classifications_top3=eukaryotic_classifications_top3_cleaned
+eukaryotic_classifications_top3['total']=eukaryotic_classifications_top3['unclassified']+eukaryotic_classifications_top3['classified']
+
+## remove failed sample AZP-80 for summary stats (<1k QC passed reads)
+eukaryotic_classifications_top3_failed_removed=eukaryotic_classifications_top3[eukaryotic_classifications_top3['index'] != 'AZP-80']
 # %%
 # mean and median of top genus:
-print('mean top euk perc.',np.mean(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']))
-print('median top euk perc.',np.median(eukaryotic_classifications_top3['kraken2_top1_euk_genus_perc']))
+print('mean top euk perc.',np.mean(eukaryotic_classifications_top3_failed_removed['kraken2_top1_euk_genus_perc']))
+print('median top euk perc.',np.median(eukaryotic_classifications_top3_failed_removed['kraken2_top1_euk_genus_perc']))
+
+print('Range of assessed reads:',np.min(eukaryotic_classifications_top3_failed_removed['total']),np.max(eukaryotic_classifications_top3_failed_removed['total']))
 # %% Correlation of top eukaryote DNA % vs pathogen DNA %
 plotting_dict={}
 
